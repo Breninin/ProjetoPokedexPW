@@ -11,9 +11,7 @@ Pedro Henrique dos Santos Xavier Araujo
 > Páginas Obrigatórias:
 
     ➔ Home 
+    ➔ Ajuda
+    ➔ Contato 
     ➔ Quem somos
-    ➔ Contato  
-    ➔ Personagens/Pokémon 
-    ➔ Histórias 
-    ➔ Localizações
-    ➔ Jogos
+    ➔ Pokedex
