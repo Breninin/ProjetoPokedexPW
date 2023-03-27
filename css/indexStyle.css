@@ -1,0 +1,99 @@
+body {
+    background-color: rgb(20, 20, 20);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+}
+
+/* Top nav */
+.topnav {
+    background-color: #C22121;
+    padding: 10px;
+    text-align: center;
+}
+
+.topnav a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: 14pt;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+/* Header */
+.cabecalho {
+    background-color: white;
+    text-align: center;
+
+    margin-top: 15px;
+    margin-bottom: 5px;
+    margin-left: 200px;
+    margin-right: 200px;
+
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.cabecalho h1 {
+    font-size: 32pt;
+}
+
+/* Main */
+.principal {
+    background-color: white;
+    color: black;
+
+    margin-top: 15px;
+    margin-bottom: 10px;
+    margin-left: 25px;
+    margin-right: 25px;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+/* Texto */
+.textoPrincipal {
+    width: 80%;
+    float: left;
+    text-align: center;
+}
+
+/* Imagem pokedex */
+.imagemPokedex {
+    width: 20%;
+    float: right;
+}
+
+.imagemPokedex img {
+    width: 255px;
+    height: 360px;
+}
+
+/* Botão abrir Pokedex */
+.botaoPokedex {
+    text-align: center;
+}
+
+.botaoPokedex button {
+    background-color: red;
+    color: white;
+    font-size: 20pt;
+    padding: 20px;
+}
+
+/* Footer */
+.principal:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.rodape {
+    padding: 10px;
+    margin-top: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: white;
+    text-align: center;
+}
