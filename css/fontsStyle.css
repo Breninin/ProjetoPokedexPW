@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'pokemonFontTitle';
+    src: url('../fonts/pokemonTitleFont/pokemonhollownormal-pypz-webfont.eot');
+    src: url('../fonts/pokemonTitleFont/pokemonhollownormal-pypz-webfont.eot#iefix') format('embedded-opentype'),
+         url('../fonts/pokemonTitleFont/pokemonhollownormal-pypz-webfont.woff2') format('woff2'),
+         url('../fonts/pokemonTitleFont/pokemonhollownormal-pypz-webfont.woff') format('woff'),
+         url('../fonts/pokemonTitleFont/pokemonhollownormal-pypz-webfont.ttf') format('truetype'),
+         url('../fonts/pokemonTitleFont/pokemonhollownormal-pypz-webfont.svg#pokemon_hollownormal') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'omegaRubyFont';
+    src: url('../fonts/omegaRubyFont/omegaruby-pleb-webfont.eot');
+    src: url('../fonts/omegaRubyFont/omegaruby-pleb-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/omegaRubyFont/omegaruby-pleb-webfont.woff2') format('woff2'),
+         url('../fonts/omegaRubyFont/omegaruby-pleb-webfont.woff') format('woff'),
+         url('../fonts/omegaRubyFont/omegaruby-pleb-webfont.ttf') format('truetype'),
+         url('../fonts/omegaRubyFont/omegaruby-pleb-webfont.svg#omega_rubyregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
