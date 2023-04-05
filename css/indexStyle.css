@@ -1,7 +1,7 @@
 @import url('fontsStyle.css');
 
 body {
-    background-image: url(../images/Wallpaper151.jpg);
+    background-image: url('../images/Wallpaper151.jpg');
     background-repeat: no-repeat;
     background-position: 0px;
     background-attachment: fixed;
@@ -13,21 +13,21 @@ body {
     color: white;
 }
 
-/* Top nav */
-.topnav {
-    background-color: #C22121;
-    padding: 10px;
-    text-align: center;
-}
-
-.topnav a {
-    display: inline-block;
-    color: white;
-    text-decoration: none;
-    font-size: 14pt;
-    margin-left: 50px;
-    margin-right: 50px;
-}
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #3b0000;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgb(115, 0, 0);
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(235, 0, 0);
+  }
 
 /* Header */
 .cabecalho {
@@ -36,7 +36,7 @@ body {
 
     font-family: pokemonTitleFont, omegaRubyFont, alphaSapphireFont, pokemonGBTextFont;
 
-    margin-top: 15px;
+    margin-top: 65px;
     margin-bottom: 5px;
     margin-left: 200px;
     margin-right: 200px;
@@ -47,6 +47,7 @@ body {
 
 .cabecalho h1 {
     font-size: 32pt;
+    font-weight: bold;
 }
 
 /* Main */
@@ -74,6 +75,7 @@ body {
 {
     margin-left: 30px;
     margin-right: 30px;
+    font-family: pokemonGBTextFont, Arial, Helvetica, sans-serif;
 }
 
 /* Imagem pokedex */
@@ -95,6 +97,7 @@ body {
 .botaoPokedex button {
     background-color: red;
     color: white;
+    font-family: pokemonGBTextFont, omegaRubyFont, alphaSapphireFont;
     font-size: 20pt;
     padding: 20px;
 }

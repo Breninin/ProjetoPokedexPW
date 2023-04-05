@@ -1,0 +1,170 @@
+@import url('fontsStyle.css');
+
+.topNav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: table;
+  margin: 0 auto;
+  background-color: rgb(20, 20, 20);
+}
+
+.topNav a {
+  position: relative;
+  width: 16.67%;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  color: white;
+  text-decoration: none;
+  font-family: pokemonGBTextFont, omegaRubyFont, alphaSapphireFont;
+  font-weight: bold;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  transition: 0.2s ease color;
+}
+
+.topNav a:before,
+.topNav a:after 
+{
+  content: "";
+  position: absolute;
+  border-radius: 20%;
+  transform: scale(0);
+  transition: 0.2s ease transform;
+}
+
+.topNav a:before 
+{
+  top: 0;
+  left: 10px;
+  width: 6px;
+  height: 6px;
+}
+
+.topNav a:after 
+{
+  top: 5px;
+  left: 18px;
+  width: 4px;
+  height: 4px;
+}
+
+.topNav a:nth-child(1):before 
+{
+  background-color: red;
+}
+
+.topNav a:nth-child(1):after 
+{
+  background-color: white;
+}
+
+.topNav a:nth-child(2):before 
+{
+  background-color: red;
+}
+
+.topNav a:nth-child(2):after 
+{
+  background-color: white;
+}
+
+.topNav a:nth-child(3):before 
+{
+  background-color: red;
+}
+
+.topNav a:nth-child(3):after 
+{
+  background-color: white;
+}
+
+.topNav a:nth-child(4):before 
+{
+  background-color: red;
+}
+
+.topNav a:nth-child(4):after 
+{
+  background-color: white;
+}
+
+.topNav a:nth-child(5):before 
+{
+  background-color: red;
+}
+
+.topNav a:nth-child(5):after 
+{
+  background-color: white;
+}
+
+.topNav a:nth-child(6):before 
+{
+  background-color: red;
+}
+
+.topNav a:nth-child(6):after 
+{
+  background-color: white;
+}
+
+.topNav #indicator 
+{
+  position: absolute;
+  left: 1%;
+  bottom: 0;
+  width: 140px;
+  height: 3px;
+  background-color: white;
+  border-radius: 5px;
+  transition: 0.2s ease left;
+}
+
+.topNav a:hover 
+{
+  color: white;
+}
+
+.topNav a:hover:before,
+.topNav a:hover:after 
+{
+  transform: scale(1);
+}
+
+.topNav a:nth-child(1):hover ~ #indicator 
+{
+  background: linear-gradient(130deg, rgb(180, 0, 0), rgb(255, 65, 55));
+}
+
+.topNav a:nth-child(2):hover ~ #indicator 
+{
+  left: 17.75%;
+  background: linear-gradient(130deg, rgb(180, 0, 0), rgb(255, 65, 55));
+}
+
+.topNav a:nth-child(3):hover ~ #indicator 
+{
+  left: 34.5%;
+  background: linear-gradient(130deg, rgb(180, 0, 0), rgb(255, 65, 55));
+}
+
+.topNav a:nth-child(4):hover ~ #indicator 
+{
+  left: 51%;
+  background: linear-gradient(130deg, rgb(180, 0, 0), rgb(255, 65, 55));
+}
+
+.topNav a:nth-child(5):hover ~ #indicator 
+{
+  left: 67.65%;
+  background: linear-gradient(130deg, rgb(180, 0, 0), rgb(255, 65, 55));
+}
+
+.topNav a:nth-child(6):hover ~ #indicator 
+{
+  left: 84.4%;
+  background: linear-gradient(130deg, rgb(180, 0, 0), rgb(255, 65, 55));
+}
