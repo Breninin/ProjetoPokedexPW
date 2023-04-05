@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Arimo:400,700&display=swap');
+@import url('base.css');
+
+:root {
+  --cor_base: #0076c6;
+  --cor_fundo: #005186;
+}
 
 body {
   margin: 0px;
@@ -34,15 +40,22 @@ body {
 .centralBorde {
   position: relative;
   width: 300px;
-  height: 717px;
+  height: 735px;
   border-color: #000068;
   border-width: 3px;
   border-radius: 5px;
-  background-color: #000068;
+  background-color: #0000ff;
   float: right;
   right: 30px;
   top: -3px;
   font-family: 'Rubik', sans-serif;
+}
+
+.elementsCenter{
+  position: absolute;
+  top: 15px;
+  right: 0;
+  left: 0;
 }
 
 .boxTitle {
@@ -50,8 +63,9 @@ body {
   text-align: center;
   position: absolute;
   color: #f6f4f4;
-  right: 40%;
-  top: 13px;
+  left: 0;
+  right: 0;
+  top: 1.5%;
 }
 
 .wrapper {
@@ -70,7 +84,7 @@ body {
   width: 96%;
   margin: auto;
   align-self: center;
-  background: url("../imagens/blue_tittle.gif");
+  background: url("../imagens/blue_tittle.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
@@ -117,8 +131,12 @@ body {
 }
 
 .panel-title {
-  font-size: 1em;
-  font-weight: bold
+  font-size: 15px;
+  font-weight: bold;
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top:11.90%
 }
 
 .radio {
@@ -135,4 +153,24 @@ body {
 #two:checked~.tabs #two-tab {
   background: #141414;
   color: #141414;
+}
+
+.divisor {
+  background-color: #0000ff;
+  height: 5px;
+}
+
+.boxInformacoesTitle {
+  font-size: 14px;
+  text-align: center;
+  position: absolute;
+  color: #f6f4f4;
+}
+
+.boxInformacoes{
+  font-size: 13px;
+  text-align: center;
+  color: #f6f4f4;
+  right: 5%;
+  position: absolute;
 }
