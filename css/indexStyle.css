@@ -13,19 +13,21 @@ body {
     color: white;
 }
 
+/* Scrollbar (Andrey) */
+
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 10px;
   }
   
-  ::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     background: #3b0000;
   }
   
-  ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background: rgb(115, 0, 0);
   }
   
-  ::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
     background: rgb(235, 0, 0);
   }
 
@@ -35,8 +37,9 @@ body {
     text-align: center;
 
     font-family: pokemonTitleFont, omegaRubyFont, alphaSapphireFont, pokemonGBTextFont;
+    font-weight: bold;
 
-    margin-top: 65px;
+    margin-top: 70px;
     margin-bottom: 5px;
     margin-left: 200px;
     margin-right: 200px;
@@ -73,8 +76,8 @@ body {
 
 .textoPrincipal p
 {
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
     font-family: pokemonGBTextFont, Arial, Helvetica, sans-serif;
 }
 
@@ -98,6 +101,7 @@ body {
     background-color: red;
     color: white;
     font-family: pokemonGBTextFont, omegaRubyFont, alphaSapphireFont;
+    font-weight: bold;
     font-size: 20pt;
     padding: 20px;
 }
