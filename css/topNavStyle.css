@@ -19,25 +19,9 @@
   font-size: 13pt;
 }
 
-/* Borda */
-
-.topNav li
-{
-  float: left;
-  border-left: 1px solid rgb(35, 35, 35);
-}
-
-.topNav li:first-child
-{
-  border-left: none;
-}
-
 /* Posicionamento e Formatação dos Links */
 
 .topNav a {
-  position: relative;
-  display: table-cell;
-
   text-decoration: none;
   text-align: center;
   vertical-align: middle;
@@ -46,10 +30,16 @@
   font-family: pokemonGBTextFont, omegaRubyFont, alphaSapphireFont;
   font-weight: bold;
 
-  width: 206px;
+  width: 210px;
   height: 60px;
+  line-height: 60px;
 
   transition: 0.2s ease color;
+}
+
+.topNav a:first-child
+{
+  line-height: 30px;
 }
 
 .topNav a:hover 
