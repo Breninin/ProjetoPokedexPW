@@ -21,7 +21,7 @@
 .topNav li
 {
   float: left;
-  border-left: 1px solid rgb(180, 0, 0);
+  border-left: 1px solid rgb(35, 35, 35);
 }
 
 .topNav li:first-child
