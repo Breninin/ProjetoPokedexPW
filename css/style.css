@@ -54,10 +54,7 @@ body {
   display: flex;
   width: 300px;
   height: 735px;
-  border-color: #000068;
-  border-width: 3px;
-  border-radius: 5px;
-  background-color: #0000ff;
+  background-color: #0000a7;
   float: right;
   right: 30px;
   top: 20px;
@@ -76,9 +73,10 @@ body {
   text-align: center;
   position: absolute;
   color: #f6f4f4;
-  left: 0;
-  right: 0;
+  background-color: #0e008a;
+  left: 2.5%;
   font-family: omegaRubyFont;
+  width: 95%;
 }
 
 .wrapper {
