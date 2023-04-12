@@ -2,13 +2,16 @@
 
 .topNav {
   position: fixed;
+  display: flex;
   margin: 0 auto;
 
   top: 0;
   right: 0;
   left: 0;
 
-  display: inline;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-content: center;
   list-style-type: none;
   
   background-color: rgb(20, 20, 20);
