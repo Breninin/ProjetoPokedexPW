@@ -104,6 +104,15 @@ body {
     font-size: 20pt;
     padding: 20px;
 }
+.botaoPokedex button a 
+{
+    color: white;
+    text-decoration: none;
+}
+.botaoPokedex button a:hover
+{
+    color: yellow;
+}
 
 /* Footer */
 .principal:after {
