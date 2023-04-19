@@ -1,49 +1,63 @@
 @font-face {
-    font-family: 'pokemonTitleFont';
-    src: url('../fonts/pokemonTitleFont/pokemonhollownormal-pypz-webfont.eot');
-    src: url('../fonts/pokemonTitleFont/pokemonhollownormal-pypz-webfont.eot#iefix') format('embedded-opentype'),
-        url('../fonts/pokemonTitleFont/pokemonhollownormal-pypz-webfont.woff2') format('woff2'),
-        url('../fonts/pokemonTitleFont/pokemonhollownormal-pypz-webfont.woff') format('woff'),
-        url('../fonts/pokemonTitleFont/pokemonhollownormal-pypz-webfont.ttf') format('truetype'),
-        url('../fonts/pokemonTitleFont/pokemonhollownormal-pypz-webfont.svg#pokemon_hollownormal') format('svg');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "pokemonTitleFont";
+  src: url("../fonts/pokemonTitleFont/pokemonhollownormal-pypz-webfont.eot");
+  src: url("../fonts/pokemonTitleFont/pokemonhollownormal-pypz-webfont.eot#iefix")
+      format("embedded-opentype"),
+    url("../fonts/pokemonTitleFont/pokemonhollownormal-pypz-webfont.woff2")
+      format("woff2"),
+    url("../fonts/pokemonTitleFont/pokemonhollownormal-pypz-webfont.woff")
+      format("woff"),
+    url("../fonts/pokemonTitleFont/pokemonhollownormal-pypz-webfont.ttf")
+      format("truetype"),
+    url("../fonts/pokemonTitleFont/pokemonhollownormal-pypz-webfont.svg#pokemon_hollownormal")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'omegaRubyFont';
-    src: url('../fonts/omegaRubyFont/omegaruby-pleb-webfont.eot');
-    src: url('../fonts/omegaRubyFont/omegaruby-pleb-webfont.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/omegaRubyFont/omegaruby-pleb-webfont.woff2') format('woff2'),
-        url('../fonts/omegaRubyFont/omegaruby-pleb-webfont.woff') format('woff'),
-        url('../fonts/omegaRubyFont/omegaruby-pleb-webfont.ttf') format('truetype'),
-        url('../fonts/omegaRubyFont/omegaruby-pleb-webfont.svg#omega_rubyregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "omegaRubyFont";
+  src: url("../fonts/omegaRubyFont/omegaruby-pleb-webfont.eot");
+  src: url("../fonts/omegaRubyFont/omegaruby-pleb-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/omegaRubyFont/omegaruby-pleb-webfont.woff2") format("woff2"),
+    url("../fonts/omegaRubyFont/omegaruby-pleb-webfont.woff") format("woff"),
+    url("../fonts/omegaRubyFont/omegaruby-pleb-webfont.ttf") format("truetype"),
+    url("../fonts/omegaRubyFont/omegaruby-pleb-webfont.svg#omega_rubyregular")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'alphaSapphireFont';
-    src: url('../fonts/alphaSapphireFont/alphasapphire-dqmr-webfont.eot');
-    src: url('../fonts/alphaSapphireFont/alphasapphire-dqmr-webfont.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/alphaSapphireFont/alphasapphire-dqmr-webfont.woff2') format('woff2'),
-        url('../fonts/alphaSapphireFont/alphasapphire-dqmr-webfont.woff') format('woff'),
-        url('../fonts/alphaSapphireFont/alphasapphire-dqmr-webfont.ttf') format('truetype'),
-        url('../fonts/alphaSapphireFont/alphasapphire-dqmr-webfont.svg#alpha_sapphireregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
+  font-family: "alphaSapphireFont";
+  src: url("../fonts/alphaSapphireFont/alphasapphire-dqmr-webfont.eot");
+  src: url("../fonts/alphaSapphireFont/alphasapphire-dqmr-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/alphaSapphireFont/alphasapphire-dqmr-webfont.woff2")
+      format("woff2"),
+    url("../fonts/alphaSapphireFont/alphasapphire-dqmr-webfont.woff")
+      format("woff"),
+    url("../fonts/alphaSapphireFont/alphasapphire-dqmr-webfont.ttf")
+      format("truetype"),
+    url("../fonts/alphaSapphireFont/alphasapphire-dqmr-webfont.svg#alpha_sapphireregular")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'pokemonGBTextFont';
-    src: url('../fonts/pokemonGBTextFont/pokemongb-raeo-webfont.eot');
-    src: url('../fonts/pokemonGBTextFont/pokemongb-raeo-webfont.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/pokemonGBTextFont/pokemongb-raeo-webfont.woff2') format('woff2'),
-        url('../fonts/pokemonGBTextFont/pokemongb-raeo-webfont.woff') format('woff'),
-        url('../fonts/pokemonGBTextFont/pokemongb-raeo-webfont.ttf') format('truetype'),
-        url('../fonts/pokemonGBTextFont/pokemongb-raeo-webfont.svg#pokemon_gbregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
+  font-family: "pokemonGBTextFont";
+  src: url("../fonts/pokemonGBTextFont/pokemongb-raeo-webfont.eot");
+  src: url("../fonts/pokemonGBTextFont/pokemongb-raeo-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/pokemonGBTextFont/pokemongb-raeo-webfont.woff2")
+      format("woff2"),
+    url("../fonts/pokemonGBTextFont/pokemongb-raeo-webfont.woff") format("woff"),
+    url("../fonts/pokemonGBTextFont/pokemongb-raeo-webfont.ttf")
+      format("truetype"),
+    url("../fonts/pokemonGBTextFont/pokemongb-raeo-webfont.svg#pokemon_gbregular")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
 }

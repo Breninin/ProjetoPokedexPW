@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Arimo:400,700&display=swap');
-@import url('../fontsStyle.css');
-@import url('../topNavStyle.css');
+@import url("https://fonts.googleapis.com/css?family=Arimo:400,700&display=swap");
+@import url("../fontsStyle.css");
+@import url("../topNavStyle.css");
 
 ::-webkit-scrollbar {
   width: 10px;
@@ -58,7 +58,7 @@ body {
   float: right;
   right: 30px;
   top: 20px;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 
 .elementsCenter {

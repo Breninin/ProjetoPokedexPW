@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Arimo:400,700&display=swap');
-@import url('../fontsStyle.css');
-@import url('../topNavStyle.css');
+@import url("https://fonts.googleapis.com/css?family=Arimo:400,700&display=swap");
+@import url("../fontsStyle.css");
+@import url("../topNavStyle.css");
 
 ::-webkit-scrollbar {
   width: 10px;
@@ -58,7 +58,7 @@ body {
   float: right;
   right: 30px;
   top: 20px;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 
 .elementsCenter {
@@ -123,7 +123,6 @@ body {
 
 .panels {
   background: #141414;
-  ;
   min-height: 380px;
   width: 83%;
   max-width: 500px;
@@ -135,7 +134,7 @@ body {
 
 .panel {
   display: none;
-  animation: fadein .4s;
+  animation: fadein 0.4s;
   font-family: pokemonGBTextFont, omegaRubyFont, alphaSapphireFont;
   font-weight: bold;
 }
@@ -156,7 +155,7 @@ body {
   position: absolute;
   left: 0%;
   right: 0%;
-  top: 11.90%;
+  top: 11.9%;
   font-family: pokemonGBTextFont, omegaRubyFont, alphaSapphireFont;
   font-weight: bold;
   line-height: 40px;
@@ -166,16 +165,16 @@ body {
   display: none;
 }
 
-#one:checked~.panels #one-panel,
-#two:checked~.panels #two-panel {
+#one:checked ~ .panels #one-panel,
+#two:checked ~ .panels #two-panel {
   display: block;
   color: #ffffff;
   font-family: pokemonGBTextFont, omegaRubyFont, alphaSapphireFont;
   font-weight: bold;
 }
 
-#one:checked~.tabs #one-tab,
-#two:checked~.tabs #two-tab {
+#one:checked ~ .tabs #one-tab,
+#two:checked ~ .tabs #two-tab {
   background: #141414;
   color: #141414;
   font-family: pokemonGBTextFont, omegaRubyFont, alphaSapphireFont;
