@@ -38,14 +38,14 @@ body {
     margin-right: 81.2%;
 
     width: 18.8%;
-    height: 90.9%;
+    height: 91.4%;
 
     text-align: center;
 
     background-color: rgb(200, 200, 200);
 }
 
-#txtSearch {
+.txtSearch {
     margin-top: 10px;
 
     width: 80%;
@@ -56,7 +56,7 @@ body {
     background-color: rgb(235, 235, 235);
 }
 
-#sltPokemon {
+.sltPokemon {
     margin-top: 10px;
 
     width: 90%;
@@ -71,17 +71,17 @@ body {
     font-size: 12pt;
 }
 
-#sltPokemon option {
+.sltPokemon option {
     padding-top: 6px;
     padding-bottom: 2px;
     margin-top: 5px;
 }
 
-#sltPokemon option:hover {
+.sltPokemon option:hover {
     color: rgb(210, 0, 0);
 }
 
-#sltPokemon option::after {
+.sltPokemon option::after {
     background-color: rgb(210, 0, 0);
     color: white;
 }
@@ -95,7 +95,7 @@ body {
     margin-left: 18.8%;
 
     width: 81.2%;
-    height: 90.9%;
+    height: 91.4%;
 }
 
 .barraTopo {
@@ -103,4 +103,91 @@ body {
     height: 10%;
 
     background-color: rgb(210, 0, 0);
+}
+
+.barraBaixo
+{
+    width: 100%;
+    height: 10%;
+
+    background-color: rgb(210, 0, 0);
+}
+
+.telaPokemon
+{
+    width: 100%;
+    height: 80%;
+}
+
+.cardEsquerdo
+{
+    float: left;
+    width: 70%;
+    height: 50%;
+}
+
+.cardDireito
+{
+    float: right;
+    width: 30%;
+    height: 50%;
+}
+
+.flexPokemon
+{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.nomePokemon
+{
+    float: left;
+    margin: 30px 30px 0px;
+    
+    font-family: omegaRubyFont, alphaSapphireFont, pokemonGBTextFont;
+    font-size: 56pt;
+}
+
+.tituloPokemon
+{
+    margin: 15px 30px;
+
+    font-family: omegaRubyFont, alphaSapphireFont, pokemonGBTextFont;
+    font-size: 26pt;
+}
+
+.flexTipoPokemon
+{
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.tipoPokemon
+{
+    float: left;
+    margin: 0px 30px;
+    padding: 0px 10px;
+
+    height: 60px;
+    line-height: 60px;
+
+    font-family: pokemonGBTextFont, omegaRubyFont, alphaSapphireFont;
+    font-size: 20pt;
+
+    text-align: center;
+    vertical-align: center;
+
+    background-color: red;
+}
+
+.imgPokemon
+{
+    margin: 30px;
+
+    height: 80%;
+    width: 65%;
+
+    border-radius: 50%;
+
+    float: right;
 }
