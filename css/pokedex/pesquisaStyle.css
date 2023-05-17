@@ -1,0 +1,78 @@
+.barraLateral {
+    position: absolute;
+    float: left;
+    left: 0;
+
+    margin-top: 60px;
+    margin-right: 81.2%;
+
+    width: 18.8%;
+    height: 91.4%;
+
+    text-align: center;
+
+    background-color: rgb(200, 200, 200);
+}
+
+.txtSearch {
+    margin-top: 15px;
+
+    width: 80%;
+    height: 30px;
+
+    border: 1px solid red;
+    background-color: rgb(235, 235, 235);
+
+    font-family: pokemonGBTextFont, Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+}
+
+.ulPokemon {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 15px;
+
+    height: 550px;
+    width: 70%;
+
+    overflow: hidden;
+    overflow-y: scroll;
+
+    border: 1px solid red;
+    background-color: rgb(235, 235, 235);
+
+    list-style-type: none;
+    list-style: none;
+
+    text-align: center;
+    font-family: pokemonGBTextFont, Arial, Helvetica, sans-serif;
+    font-size: 14pt;
+}
+
+.ulPokemon li a {
+    display: block;
+
+    padding-top: 6px;
+    padding-bottom: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    margin-top: 5px;
+
+    text-decoration: none;
+    
+    color: black;
+}
+
+.ulPokemon li a:hover {
+    background-color: rgb(205, 205, 205);
+    color: rgb(210, 0, 0);
+}
+
+/*
+.ulPokemon li a::after {
+    background-color: rgb(210, 0, 0);
+    color: white;
+}
+*/

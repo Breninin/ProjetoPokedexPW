@@ -29,63 +29,6 @@ body {
     background: rgb(235, 0, 0);
 }
 
-.barraLateral {
-    position: absolute;
-    float: left;
-    left: 0;
-
-    margin-top: 60px;
-    margin-right: 81.2%;
-
-    width: 18.8%;
-    height: 91.4%;
-
-    text-align: center;
-
-    background-color: rgb(200, 200, 200);
-}
-
-.txtSearch {
-    margin-top: 10px;
-
-    width: 80%;
-    height: 30px;
-
-    border-radius: 1px;
-    border-color: red;
-    background-color: rgb(235, 235, 235);
-}
-
-.sltPokemon {
-    margin-top: 10px;
-
-    width: 90%;
-
-    border-radius: 1px;
-    border-color: red;
-    background-color: rgb(235, 235, 235);
-
-
-    text-align: center;
-    font-family: pokemonGBTextFont, Arial, Helvetica, sans-serif;
-    font-size: 12pt;
-}
-
-.sltPokemon option {
-    padding-top: 6px;
-    padding-bottom: 2px;
-    margin-top: 5px;
-}
-
-.sltPokemon option:hover {
-    color: rgb(210, 0, 0);
-}
-
-.sltPokemon option::after {
-    background-color: rgb(210, 0, 0);
-    color: white;
-}
-
 .infoPokemon {
     position: absolute;
     float: right;
@@ -105,31 +48,18 @@ body {
     background-color: rgb(210, 0, 0);
 }
 
-.barraBaixo
-{
-    width: 100%;
-    height: 10%;
-
-    background-color: rgb(210, 0, 0);
-}
-
 .telaPokemon
 {
     width: 100%;
-    height: 80%;
+    height: 90%;
 }
+
+/*INFORMAÇÕES EXIBIDAS NA PARTE SUPERIOR ESQUERDA DA TELA*/
 
 .cardEsquerdo
 {
     float: left;
     width: 70%;
-    height: 50%;
-}
-
-.cardDireito
-{
-    float: right;
-    width: 30%;
     height: 50%;
 }
 
@@ -165,13 +95,13 @@ body {
 .tipoPokemon
 {
     float: left;
-    margin: 0px 30px;
+    margin: 5px 30px;
     padding: 0px 10px;
 
     height: 60px;
     line-height: 60px;
 
-    font-family: pokemonGBTextFont, omegaRubyFont, alphaSapphireFont;
+    font-family: pokemonGBTextFont, Arial, Helvetica, sans-serif;
     font-size: 20pt;
 
     text-align: center;
@@ -180,14 +110,44 @@ body {
     background-color: red;
 }
 
+/*INFORMAÇÕES EXIBIDAS NA PARTE SUPERIOR DIREITA DA TELA*/
+
+.cardDireito
+{
+    float: right;
+    width: 30%;
+    height: 50%;
+}
+
 .imgPokemon
 {
-    margin: 30px;
-
     height: 80%;
-    width: 65%;
+    width: 75%;
+
+    margin: 15px 35px;
 
     border-radius: 50%;
 
     float: right;
+}
+
+/*INFORMAÇÕES EXIBIDAS NA PARTE INFERIOR DA TELA*/
+
+.cardBaixo
+{
+    float: left;
+    width: 100%;
+    height: 50%;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-flow: row wrap;
+}
+
+.descPokemon
+{
+    margin: 0px 5%;
+    font-family: pokemonGBTextFont, Arial, Helvetica, sans-serif;
+    font-size: 18pt;
 }
