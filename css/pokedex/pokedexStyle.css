@@ -3,7 +3,7 @@
 body {
     background-color: rgb(15, 15, 15);
 
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: PokemonGBTextFont, Arial, Helvetica, sans-serif;
     font-size: 12pt;
 
     margin: 0;
@@ -29,6 +29,8 @@ body {
     background: rgb(235, 0, 0);
 }
 
+/*DEFINIÇÕES DA TELA*/
+
 .infoPokemon {
     position: absolute;
     float: right;
@@ -41,17 +43,45 @@ body {
     height: 91.4%;
 }
 
+.telaPokemon
+{
+    width: 100%;
+    height: 90%;
+}
+
+/*DEFINIÇÕES TOP NAV POKEDEX*/
+
 .barraTopo {
     width: 100%;
     height: 10%;
 
     background-color: rgb(210, 0, 0);
+
+    display: flex;
+    flex-flow: row nowrap;
+
+    align-items: center;
+    justify-content: space-around;
 }
 
-.telaPokemon
+.botaoPokedex
 {
-    width: 100%;
-    height: 90%;
+    font-family: PokemonGBTextFont, Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    font-weight: 900;
+
+    width: 20%;
+    height: 85%;
+
+    border: none;
+    background-color: rgb(250, 0, 0);
+    color: white;
+}
+
+.botaoPokedex:hover
+{
+    background-color: rgb(180, 10, 10);
+    color: white;
 }
 
 /*INFORMAÇÕES EXIBIDAS NA PARTE SUPERIOR ESQUERDA DA TELA*/
