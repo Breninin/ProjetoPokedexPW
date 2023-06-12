@@ -21,14 +21,22 @@
         <a href="../ajuda.html">AJUDA</a>
     </div>
     <main>
-        <form action="">
+        <form action="" autocomplete="off">
             <div class="flexGenericColumn">
                 <!-- Nome -->
-                <label class="pokeLabel" for="pokeName">Pokemon</label>
-                <input type="text" name="pokeName" class="pokeInputText inputHover" id="">
+                <div class="flexGenericColumn">
+                    <label class="pokeLabel" for="pokeName">Nome Pokemon</label>
+                    <input type="text" name="pokeName" class="pokeInputText inputHover" style="width: 160%;" id="">
+                </div>
+                
+                <!-- Número Dex -->
+                <div class="flexGenericColumn" style="margin-top: 10px;">
+                    <label class="pokeLabel" for="pokeDexNumber">Numero Dex</label>
+                    <input type="number" name="pokeDexNumber" class="pokeInputText inputHover" id="" data-onlyDigits>
+                </div>
 
                 <!-- Tamanho e Peso -->
-                <div class="flexGenericRow" style="margin-top: 20px;">
+                <div class="flexGenericRow" style="margin-top: 50px;">
                     <!-- Tamanho -->
                     <div class="flexGenericColumn">
                         <label class="pokeLabel" for="pokeSize">Tamanho</label>
@@ -47,33 +55,66 @@
                     <!-- Chance Sexo Masculino -->
                     <div class="flexGenericColumn">
                         <label class="pokeLabel" for="pokeChanceMasc">Chance Sexo <br> Masculino</label>
-                        <input type="text" name="pokeChanceMasc" class="pokeInputText inputHover" style="width: 60%;" id="">
+                        <input type="number" name="pokeChanceMasc" class="pokeInputText inputHover" style="width: 60%;" id="" data-onlyDigits>
                     </div>
 
                     <!-- Chance Sexo Feminino -->
                     <div class="flexGenericColumn">
                         <label class="pokeLabel" for="pokeChanceFem">Chance Sexo <br> Feminino</label>
-                        <input type="text" name="pokeChanceFem" class="pokeInputText inputHover" style="width: 60%;" id="">
+                        <input type="number" name="pokeChanceFem" class="pokeInputText inputHover" style="width: 60%;" id="" data-onlyDigits>
                     </div>
                 </div>
 
-                <!-- Flex Imagem e Som -->
-                <div class="flexGenericRow" style="margin-top: 10px;">
-                    <!-- Imagem -->
-                    <div class="flexGenericColumn">
-                        <label class="pokeLabel" for="">Imagem</label>
-                        <input type="text" name="" class="pokeInputText inputHover" style="width: 60%;" id="">
+                <!-- Status -->
+                <div class="flexGenericColumn" style="margin-top: 50px;">
+                    <!-- HP e SPEED-->
+                    <div class="flexGenericRow">
+                        <!-- HP -->
+                        <div class="flexGenericColumn">
+                            <label class="pokeLabel" for="pokeStatHp">HP</label>
+                            <input type="number" name="pokeStatHp" class="pokeInputText inputHover" style="width: 60%;" id="" data-onlyDigits>
+                        </div>
+    
+                        <!-- SPEED -->
+                        <div class="flexGenericColumn">
+                            <label class="pokeLabel" for="pokeStatSpeed">SPEED</label>
+                            <input type="number" name="pokeStatSpeed" class="pokeInputText inputHover" style="width: 60%;" id="" data-onlyDigits>
+                        </div>
                     </div>
 
-                    <!-- Som -->
-                    <div class="flexGenericColumn">
-                        <label class="pokeLabel" for="">Som</label>
-                        <input type="text" name="" class="pokeInputText inputHover" style="width: 60%;" id="">
+                    <!-- Stats Físicos-->
+                    <div class="flexGenericRow" style="margin-top: 10px;">
+                        <!-- HP -->
+                        <div class="flexGenericColumn">
+                            <label class="pokeLabel" for="pokeStatAtk">ATK</label>
+                            <input type="number" name="pokeStatAtk" class="pokeInputText inputHover" style="width: 60%;" id="" data-onlyDigits>
+                        </div>
+    
+                        <!-- SPEED -->
+                        <div class="flexGenericColumn">
+                            <label class="pokeLabel" for="pokeStatDef">DEF</label>
+                            <input type="number" name="pokeStatDef" class="pokeInputText inputHover" style="width: 60%;" id="" data-onlyDigits>
+                        </div>
+                    </div>
+
+                    <!-- Stats Especiais-->
+                    <div class="flexGenericRow" style="margin-top: 10px;">
+                        <!-- HP -->
+                        <div class="flexGenericColumn">
+                            <label class="pokeLabel" for="pokeStatSpAtk">SP. ATK</label>
+                            <input type="number" name="pokeStatSpAtk" class="pokeInputText inputHover" style="width: 60%;" id="" data-onlyDigits>
+                        </div>
+    
+                        <!-- SPEED -->
+                        <div class="flexGenericColumn">
+                            <label class="pokeLabel" for="pokeStatSpDef">SP. DEF</label>
+                            <input type="number" name="pokeStatSpDef" class="pokeInputText inputHover" style="width: 60%;" id="" data-onlyDigits>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Tipos -->
-                <div class="flexGenericRow" style="margin-top: 30px;">
+                <div class="flexGenericRow" style="margin-top: 50px;">
                     <!-- Tipo Primario -->
                     <div class="flexGenericColumn">
                         <label class="pokeLabel" for="pokeTypePrimary">Tipo <br> Primário</label>
@@ -126,7 +167,7 @@
                 </div>
 
                 <!-- Grupos de Ovos -->
-                <div class="flexGenericRow" style="margin-top: 10px;">
+                <div class="flexGenericRow" style="margin-top: 50px;">
                     <!-- Grupo de Ovos Primário -->
                     <div class="flexGenericColumn">
                         <label class="pokeLabel" for="pokeEggPrimary">Grupo de Ovos <br> Primário</label>
@@ -173,7 +214,7 @@
                 </div> 
 
                 <!-- Flex Descrições -->
-                <div class="flexGenericColumn" style="margin-top: 30px;">
+                <div class="flexGenericColumn" style="margin-top: 50px;">
                     <!-- Flex Descrições RED e BLUE -->
                     <div class="flexGenericRow">
                         <!-- Descrição Pokemon RED -->
@@ -190,7 +231,7 @@
                     </div>
 
                     <!-- Flex Descrições YELLOW e GOLD -->
-                    <div class="flexGenericRow">
+                    <div class="flexGenericRow" style="margin-top: 10px;">
                         <!-- Descrição Pokemon YELLOW -->
                         <div class="flexGenericColumn">
                             <label class="pokeLabel" for="pokeDescYellow">Desc Yellow</label>
@@ -205,7 +246,7 @@
                     </div>
 
                     <!-- Flex Descrições SILVER e CRYSTAL -->
-                    <div class="flexGenericRow">
+                    <div class="flexGenericRow" style="margin-top: 10px;">
                         <!-- Descrição Pokemon SILVER -->
                         <div class="flexGenericColumn">
                             <label class="pokeLabel" for="pokeDescSilver">Desc Silver</label>
@@ -219,6 +260,9 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Botão Salvar Pokémon -->
+                <input class="userInputButton" type="submit" value="SALVAR POKÉMON" id="buttonSave"/>
             </div>
         </form>
     </main>

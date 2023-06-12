@@ -18,9 +18,10 @@ body {
 
 main {
   margin: 5%;
-  margin-bottom: 0;
+  margin-bottom: 20px;
+  border-radius: 10px;
 
-  padding-bottom: 2%;
+  padding: 2% 0;
 
   background-color: rgba(15, 15, 15, 0.85);
   color: white;
@@ -76,4 +77,34 @@ main {
   width: 80%;
 
   text-align: center;
+}
+
+.userInputButton {
+  margin-top: 50px;
+  padding: 20px;
+
+  font-family: pokemonGBTextFont, Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 16pt;
+
+  border: 2px solid black;
+  background-color: red;
+  color: white;
+
+  cursor: pointer;
+}
+
+.userInputButton:hover {
+  border: 2px solid rgb(128, 0, 0);
+  background-color: rgb(255, 30, 30);
+  color: yellow;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
 }

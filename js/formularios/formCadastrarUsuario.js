@@ -11,7 +11,7 @@ inputUserName.addEventListener("blur", (event) => {
     errorMsg.textContent = "*";
     boolUserName = false;
   } else if (value.length < 5 || value.length > 30) {
-    errorMsg.textContent = "Insira um nome entre 3 e 30 caracteres";
+    errorMsg.textContent = "Insira um nome entre 5 e 30 caracteres";
     boolUserName = false;
   } else if (value === users.find(element => element.userName === value)) {
     errorMsg.textContent = "Este nome já está sendo utilizado";
