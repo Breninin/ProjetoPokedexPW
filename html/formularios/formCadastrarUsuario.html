@@ -18,40 +18,49 @@
       <a href="../quemSomos.html">QUEM SOMOS</a>
       <a href="../ajuda.html">AJUDA</a>
     </div>
-    <main>
+    <form id="formUser" autocomplete="off">
       <div class="flexUser">
         <!-- Usuário -->
         <label class="userLabel" for="userName">Usuário</label>
-        <input type="text" name="userName" class="userInputText inputHover" id="" data-getInput/>
+        <span class="spanError" id="nameSpan">*</span>
+        <input type="text" name="userName" class="userInputText inputHover" id="userName"/>
 
         <!-- Nome Real -->
         <label class="userLabel" for="userRealName">Nome Real</label>
-        <input type="text" name="userRealName" class="userInputText inputHover" id="" data-getInput/>
+        <span class="spanError" id="realNameSpan"></span>
+        <input type="text" name="userRealName" class="userInputText inputHover" id="userRealName"/>
 
         <!-- Email -->
         <label class="userLabel" for="userEmail">Email</label>
-        <input type="text" name="userEmail" class="userInputText inputHover" id="" data-getInput/>
+        <span class="spanError" id="emailSpan">*</span>
+        <input type="text" name="userEmail" class="userInputText inputHover" id="userEmail"/>
 
         <!-- Telefone -->
         <label class="userLabel" for="userPhone">Telefone</label>
-        <input type="text" name="userPhone" class="userInputText inputHover" id="" data-getInput/>
+        <span class="spanError" id="phoneSpan"></span>
+        <input type="text" name="userPhone" class="userInputText inputHover" id="userPhone" maxlength="13"/>
 
         <!-- Data de Nascimento -->
         <label class="userLabel" for="userDate">Nascimento</label>
-        <input type="date" name="userDate" class="userInputText inputHover" id="" data-getInput/>
+        <span class="spanError" id="dateSpan"></span>
+        <input type="date" name="userDate" class="userInputText inputHover" id="userDate"/>
 
         <!-- Senha -->
         <label class="userLabel" for="userPass">Senha</label>
-        <input type="password" name="userPass" class="userInputText inputHover" id="" data-getInput/>
+        <span class="spanError" id="passSpan">*</span>
+        <input type="password" name="userPass" class="userInputText inputHover" id="userPass"/>
 
         <!-- Confirmar Senha -->
         <label class="userLabel" for="userConfPass">Confirmar Senha</label>
-        <input type="password" name="userConfPass" class="userInputText inputHover" id="" data-getInput/>
+        <span class="spanError" id="confPassSpan">*</span>
+        <input type="password" name="userConfPass" class="userInputText inputHover" id="userConfPass"/>
 
         <!-- Botão Salvar -->
-        <input class="userInputButton" type="button" value="SALVAR USUÁRIO" />
+        <br>
+        <span class="spanError" id="buttonSpan"></span>
+        <input class="userInputButton" type="submit" value="SALVAR USUÁRIO" id="buttonSave"/>
       </div>
-    </main>
+    </form>
   </body>
   <script src="../../js/formularios/formCadastrarUsuario.js"></script>
 </html>

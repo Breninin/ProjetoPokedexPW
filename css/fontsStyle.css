@@ -47,3 +47,11 @@
     font-style: normal;
 
 }
+
+:root
+{
+    --PokemonGBTextFont: pokemonGBTextFont;
+    --AlphaSapphireFont: alphaSapphireFont;
+    --OmegaRubyFont: omegaRubyFont;
+    --PokemonTitleFont: pokemonTitleFont;
+}

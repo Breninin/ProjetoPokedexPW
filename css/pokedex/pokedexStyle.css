@@ -3,7 +3,7 @@
 body {
     background-color: rgb(15, 15, 15);
 
-    font-family: PokemonGBTextFont, Arial, Helvetica, sans-serif;
+    font-family: var(--PokemonGBTextFont), Arial, Helvetica, sans-serif;
     font-size: 12pt;
 
     margin: 0;
@@ -66,7 +66,7 @@ body {
 
 .botaoPokedex
 {
-    font-family: PokemonGBTextFont, Arial, Helvetica, sans-serif;
+    font-family: var(--PokemonGBTextFont), Arial, Helvetica, sans-serif;
     font-size: 12pt;
     font-weight: 900;
 
@@ -131,7 +131,7 @@ body {
     height: 60px;
     line-height: 60px;
 
-    font-family: pokemonGBTextFont, Arial, Helvetica, sans-serif;
+    font-family: var(--PokemonGBTextFont), Arial, Helvetica, sans-serif;
     font-size: 20pt;
 
     text-align: center;
@@ -178,6 +178,6 @@ body {
 .descPokemon
 {
     margin: 0px 5%;
-    font-family: pokemonGBTextFont, Arial, Helvetica, sans-serif;
+    font-family: var(--PokemonGBTextFont), Arial, Helvetica, sans-serif;
     font-size: 18pt;
 }
