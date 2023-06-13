@@ -79,3 +79,14 @@ main {
   background-color: rgb(255, 30, 30);
   color: yellow;
 }
+
+.spanError
+{
+  height: 20px;
+  font-size: 17.5px;
+  color: red;
+}
+
+.userLabel {
+  margin-top: 15px;
+}

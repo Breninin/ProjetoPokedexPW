@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="../../css/formularios/formCadastrarGrupoOvosStyle.css">
     <title>Document</title>
 </head>
+
 <body>
     <div class="topNav">
         <a href="../../index.html">PÁGINA INÍCIAL</a>
@@ -19,12 +21,14 @@
         <a href="../ajuda.html">AJUDA</a>
     </div>
     <main>
-        <div class="flexUser">
+        <form class="flexUser" id="formUser">
+            <span class="spanError" id="nameSpan">*</span>
             <label class="userLabel" for="eggName">Nome do grupo</label>
-            <input type="text" name="eggName" class="userInputText" id="">
-
-            <input class="userInputButton" type="button" value="SALVAR GRUPO DE OVOS">
-        </div>
+            <input type="text" name="eggName" class="userInputText" id="eggName">
+            <input class="userInputButton" type="submit" value="SALVAR GRUPO DE OVOS" id="buttoValue">
+        </form>
     </main>
 </body>
+<script src="../../js/formCadastrarGrupoOvos.js"></script>
+
 </html>
