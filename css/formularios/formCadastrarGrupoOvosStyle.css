@@ -80,13 +80,9 @@ main {
   color: yellow;
 }
 
-.spanError
+.spanError, .spanErrorTittle
 {
   height: 20px;
   font-size: 17.5px;
   color: red;
-}
-
-.userLabel {
-  margin-top: 15px;
 }

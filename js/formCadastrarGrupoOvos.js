@@ -1,54 +1,29 @@
-const inputEggName = document.querySelector("#eggName");
+const inputEggName = document.querySelector("input[type=text]");
+const span = document.querySelector("span[class=spanError]");
+const spanTittle = document.querySelector("span[class=spanErrorTittle]");
+const form = document.querySelector("form[class=flexUser]");
 var boolEggName = false;
 
 inputEggName.addEventListener("blur", (event) => {
-  const errorMsg = document.querySelector("#nameSpan");
   var value = event.target.value;
-
   if (value.length === 0) {
-    errorMsg.textContent = "*";
+    span.textContent = "";
     boolEggName = false;
   } else if (value.length < 3 || value.length > 30) {
-    errorMsg.textContent = "Insira um nome entre 3 e 30 caracteres";
-    boolEggName = false;
-  } else if (value === eggs.find(element => element.eggName === value)) {
-    errorMsg.textContent = "Este nome já está sendo utilizado";
+    span.textContent = "Insira um nome entre 3 e 30 caracteres";
     boolEggName = false;
   } else {
-    errorMsg.textContent = "";
+    span.textContent = "";
     boolEggName = true;
   }
 });
 
-const form = document.querySelector("#formUser");
-const eggs = JSON.parse(localStorage.getItem("eggs")) || [];
-
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-
-  const buttonSpanError = document.querySelector("#buttoValue");
-
-  if (boolEggName === true) {
-
-    buttonSpanError.textContent = "";
-
-    const egg = eggs.find(element => element.eggName === inputEggName.value)
-
-    const eggStorage = {
-      eggName: inputEggName.value,
-    };
-
-    if (egg) {
-      buttonSpanError.textContent = "Este ovo já esta cadastrado.";
-      return;
-    } else {
-        eggs.push(eggStorage);
-    }
-    
-    localStorage.setItem("eggs", JSON.stringify(eggs));
-
+  if (boolEggName) {
     location.reload();
   } else {
-    buttonSpanError.textContent = "Erro ao enviar o formulario. Preencha os campos corretamente.";
+    span.textContent = "prencha esse campo";
+    spanTittle.textContent = "Erro ao enviar o formulario. Prncha os campos corretamente.";
   }
 });
