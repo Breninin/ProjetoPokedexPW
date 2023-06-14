@@ -17,15 +17,19 @@ inputs.forEach((element) => {
 
     switch (event.target.name) {
       case "userName":
-        spanError.textContent = checkLength(event.target.value.length, 5, 30);
         spanError.textContent = checkUserName(event.target.value);
+        if (boolUserName) {
+          spanError.textContent = checkLength(event.target.value.length, 5, 30);
+        }
         break;
       case "userRealName":
         spanError.textContent = checkLength(event.target.value.length, 5, 50);
         break;
       case "userEmail":
-        spanError.textContent = checkLength(event.target.value.length, 10, 100);
         spanError.textContent = checkEmail(event.target.value);
+        if (boolUserEmail) {
+          spanError.textContent = checkLength(event.target.value.length, 10, 100);
+        }
         break;
       case "userPhone":
         spanError.textContent = checkPhone(event.target.value);
@@ -34,10 +38,13 @@ inputs.forEach((element) => {
         spanError.textContent = checkDate(event.target.value);
         break;
       case "userPass":
-        spanError.textContent = checkLength(event.target.value.length, 8, undefined);
         spanError.textContent = checkPassword(event.target.value);
+        if (boolUserPass) {
+          spanError.textContent = checkLength(event.target.value.length, 8, undefined);
+        }
         break;
       case "userConfPass":
+        spanError.textContent = confirmPassword(event.target.value);
         break;
     }
   });
@@ -116,7 +123,9 @@ function checkPhone(phone) {
 
 //* Verificar a data de nascimento
 function checkDate(date) {
-  if (date > Date.now()) {
+  let dateValue = Date.parse(date);
+
+  if (dateValue > Date.now()) {
     boolUserDate = false;
     return "Data inválida";
   } else {
@@ -173,23 +182,15 @@ form.addEventListener("submit", (event) => {
 
     buttonSpanError.textContent = "";
 
-    const user = users.find(element => element.userName === inputUserName.value)
-
     const userStorage = {
-      userName: inputUserName.value,
-      userRealName: inputUserRealName.value,
-      userEmail: inputUserEmail.value,
-      userPhone: inputUserPhone.value,
-      userDate: inputUserDate.value,
-      userPass: inputUserPass.value,
-    };
-
-    if (user) {
-      buttonSpanError.textContent = "Este usuário já esta cadastrado.";
-      return;
-    } else {
-      users.push(userStorage);
+      userName: inputs.values["userName"],
+      userRealName: inputs.values["userRealName"],
+      userEmail: inputs.values["userEmail"],
+      userPhone: inputs.values["userPhone"],
+      userDate: inputs.values["userDate"],
+      userPass: inputs.values["userPass"],
     }
+    users.push(userStorage);
     
     localStorage.setItem("users", JSON.stringify(users));
 

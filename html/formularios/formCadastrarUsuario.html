@@ -59,19 +59,19 @@
         <div class="flex">
           <label class="userLabel" for="userPass">Senha</label>
           <span class="spanError" data-span-error>*</span>
-          <input type="password" name="userPass" class="userInputText inputHover" required minlength="8" data-get-inputs/>
+          <input type="password" name="userPass" class="userInputText inputHover" required minlength="8" data-get-inputs id="userPass"/>
         </div>
 
         <!-- Confirmar Senha -->
         <div class="flex">
           <label class="userLabel" for="userConfPass">Confirmar Senha</label>
           <span class="spanError" data-span-error>*</span>
-          <input type="password" name="userConfPass" class="userInputText inputHover" required minlength="8" data-get-inputs id="userPass"/>
+          <input type="password" name="userConfPass" class="userInputText inputHover" required minlength="8" data-get-inputs/>
         </div>
 
         <!-- Botão Salvar -->
         <div class="flex" style="margin-top: 30px;">
-          <span class="spanError"></span>
+          <span class="spanError" id="buttonSpan"></span>
           <input class="userInputButton" type="submit" value="SALVAR USUÁRIO"/>
         </div>
       </div>
