@@ -3,7 +3,6 @@ const inputs = document.querySelectorAll("[data-get-inputs]");
 const userPhone = document.querySelector("#userPhone");
 const userPass = document.querySelector("#userPass");
 
-var boolUserName = false;
 var boolUserEmail = false;
 var boolUserPhone = false;
 var boolUserDate = false;
@@ -12,15 +11,11 @@ var boolUserConf = false;
 
 inputs.forEach((element) => {
   element.addEventListener("blur", (event) => {
-    const spanError =
-      event.target.parentNode.querySelector("[data-span-error]");
+    const spanError = event.target.parentNode.querySelector("[data-span-error]");
 
     switch (event.target.name) {
       case "userName":
-        spanError.textContent = checkUserName(event.target.value);
-        if (boolUserName) {
-          spanError.textContent = checkLength(event.target.value.length, 5, 30);
-        }
+        spanError.textContent = checkLength(event.target.value.length, 5, 30);
         break;
       case "userRealName":
         spanError.textContent = checkLength(event.target.value.length, 5, 50);
@@ -60,16 +55,6 @@ function checkLength(length, minLength, maxLength) {
     return "Minimo de caracteres: " + minLength;
   } else {
     return "";
-  }
-}
-
-//* Verificar o nome de usuário
-function checkUserName(userName) {
-  if (userName === users.find((element) => element.userName === userName)) {
-    boolUserName = false;
-    return "Este nome já está sendo utilizado";
-  } else {
-    boolUserName = true;
   }
 }
 
@@ -166,33 +151,19 @@ function confirmPassword(confPassword) {
 
 //! Verificar envio do formulário
 const form = document.querySelector("#formUser");
-const users = JSON.parse(localStorage.getItem("users")) || [];
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
   const buttonSpanError = document.querySelector("#buttonSpan");
 
-  if (boolUserName === true &&
-    boolUserEmail === true &&
+  if (boolUserEmail === true &&
     boolUserPhone === true &&
     boolUserDate === true &&
     boolUserPass === true &&
     boolUserConf === true) {
-
-    buttonSpanError.textContent = "";
-
-    const userStorage = {
-      userName: inputs.values["userName"],
-      userRealName: inputs.values["userRealName"],
-      userEmail: inputs.values["userEmail"],
-      userPhone: inputs.values["userPhone"],
-      userDate: inputs.values["userDate"],
-      userPass: inputs.values["userPass"],
-    }
-    users.push(userStorage);
     
-    localStorage.setItem("users", JSON.stringify(users));
+    buttonSpanError.textContent = "";
 
     location.reload();
   } else {

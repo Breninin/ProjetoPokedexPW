@@ -49,15 +49,16 @@ form {
 
 .pokeLabel {
   text-align: center;
-  margin: 10px 0px;
+  margin-top: 15px;
 }
 
 .pokeInputText {
   font-family: pokemonGBTextFont, Arial, Helvetica, sans-serif;
   font-size: 12pt;
 
-  width: 50%;
+  width: 20vw;
   padding: 5px;
+  margin: 0 30px;
 
   border: 1px solid black;
   background-color: rgb(235, 235, 235);
@@ -72,15 +73,7 @@ form {
   resize: vertical;
 }
 
-.pokeSelect {
-  margin: 0px 80px;
-  width: 80%;
-
-  text-align: center;
-}
-
 .userInputButton {
-  margin-top: 50px;
   padding: 20px;
 
   font-family: pokemonGBTextFont, Arial, Helvetica, sans-serif;
@@ -102,4 +95,13 @@ form {
 
 .centerText {
   text-align: center;
+}
+
+.spanError
+{
+  height: 20px;
+  font-size: 17.5px;
+  color: red;
+  text-align: center;
+  vertical-align: middle;
 }
