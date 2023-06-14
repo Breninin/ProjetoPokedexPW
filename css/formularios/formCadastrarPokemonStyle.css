@@ -16,7 +16,7 @@ body {
   font-size: 16pt;
 }
 
-main {
+form {
   margin: 5%;
   margin-bottom: 20px;
   border-radius: 10px;
@@ -100,11 +100,6 @@ main {
   color: yellow;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-input[type=number] {
-  -moz-appearance: textfield;
+.centerText {
+  text-align: center;
 }

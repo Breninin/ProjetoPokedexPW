@@ -18,47 +18,62 @@
       <a href="../quemSomos.html">QUEM SOMOS</a>
       <a href="../ajuda.html">AJUDA</a>
     </div>
-    <form id="formUser" autocomplete="off">
-      <div class="flexUser">
+    <form id="formUser" autocomplete="off" oncut="return false" oncopy="return false" onpaste="return false">
+      <div class="flex">
         <!-- Usuário -->
-        <label class="userLabel" for="userName">Usuário</label>
-        <span class="spanError" id="nameSpan">*</span>
-        <input type="text" name="userName" class="userInputText inputHover" id="userName"/>
-
+        <div class="flex">
+          <label class="userLabel" for="userName">Usuário</label>
+          <span class="spanError" data-span-error>*</span>
+          <input type="text" name="userName" class="userInputText inputHover" required minlength="5" maxlength="30" data-get-inputs/>
+        </div>
+          
         <!-- Nome Real -->
-        <label class="userLabel" for="userRealName">Nome Real</label>
-        <span class="spanError" id="realNameSpan"></span>
-        <input type="text" name="userRealName" class="userInputText inputHover" id="userRealName"/>
-
+        <div class="flex">
+          <label class="userLabel" for="userRealName">Nome Real</label>
+          <span class="spanError" data-span-error>*</span>
+          <input type="text" name="userRealName" class="userInputText inputHover" required minlength="5" maxlength="50" data-get-inputs/>
+        </div>
+          
         <!-- Email -->
-        <label class="userLabel" for="userEmail">Email</label>
-        <span class="spanError" id="emailSpan">*</span>
-        <input type="text" name="userEmail" class="userInputText inputHover" id="userEmail"/>
-
+        <div class="flex">
+          <label class="userLabel" for="userEmail">Email</label>
+          <span class="spanError" data-span-error>*</span>
+          <input type="text" name="userEmail" class="userInputText inputHover" required minlength="10" maxlength="100" data-get-inputs/>
+        </div>
+          
         <!-- Telefone -->
-        <label class="userLabel" for="userPhone">Telefone</label>
-        <span class="spanError" id="phoneSpan"></span>
-        <input type="text" name="userPhone" class="userInputText inputHover" id="userPhone" maxlength="13"/>
+        <div class="flex">
+          <label class="userLabel" for="userPhone">Telefone</label>
+          <span class="spanError" data-span-error>*</span>
+          <input type="text" name="userPhone" class="userInputText inputHover" required minlength="13" maxlength="13" data-get-inputs id="userPhone"/>
+        </div>
 
         <!-- Data de Nascimento -->
-        <label class="userLabel" for="userDate">Nascimento</label>
-        <span class="spanError" id="dateSpan"></span>
-        <input type="date" name="userDate" class="userInputText inputHover" id="userDate"/>
+        <div class="flex">
+          <label class="userLabel" for="userDate">Nascimento</label>
+          <span class="spanError" data-span-error>*</span>
+          <input type="date" name="userDate" class="userInputText inputHover" required data-get-inputs/>
+        </div>
 
         <!-- Senha -->
-        <label class="userLabel" for="userPass">Senha</label>
-        <span class="spanError" id="passSpan">*</span>
-        <input type="password" name="userPass" class="userInputText inputHover" id="userPass"/>
+        <div class="flex">
+          <label class="userLabel" for="userPass">Senha</label>
+          <span class="spanError" data-span-error>*</span>
+          <input type="password" name="userPass" class="userInputText inputHover" required minlength="8" data-get-inputs/>
+        </div>
 
         <!-- Confirmar Senha -->
-        <label class="userLabel" for="userConfPass">Confirmar Senha</label>
-        <span class="spanError" id="confPassSpan">*</span>
-        <input type="password" name="userConfPass" class="userInputText inputHover" id="userConfPass"/>
+        <div class="flex">
+          <label class="userLabel" for="userConfPass">Confirmar Senha</label>
+          <span class="spanError" data-span-error>*</span>
+          <input type="password" name="userConfPass" class="userInputText inputHover" required minlength="8" data-get-inputs id="userPass"/>
+        </div>
 
         <!-- Botão Salvar -->
-        <br>
-        <span class="spanError" id="buttonSpan"></span>
-        <input class="userInputButton" type="submit" value="SALVAR USUÁRIO" id="buttonSave"/>
+        <div class="flex" style="margin-top: 30px;">
+          <span class="spanError"></span>
+          <input class="userInputButton" type="submit" value="SALVAR USUÁRIO"/>
+        </div>
       </div>
     </form>
   </body>

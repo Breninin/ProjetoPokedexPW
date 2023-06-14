@@ -1,170 +1,159 @@
-//* Verificar o nome de usuário
+const inputs = document.querySelectorAll("[data-get-inputs]");
 
-const inputUserName = document.querySelector("#userName");
+const userPhone = document.querySelector("#userPhone");
+const userPass = document.querySelector("#userPass");
+
 var boolUserName = false;
+var boolUserEmail = false;
+var boolUserPhone = false;
+var boolUserDate = false;
+var boolUserPass = false;
+var boolUserConf = false;
 
-inputUserName.addEventListener("blur", (event) => {
-  const errorMsg = document.querySelector("#nameSpan");
-  var value = event.target.value;
+inputs.forEach((element) => {
+  element.addEventListener("blur", (event) => {
+    const spanError =
+      event.target.parentNode.querySelector("[data-span-error]");
 
-  if (value.length === 0) {
-    errorMsg.textContent = "*";
-    boolUserName = false;
-  } else if (value.length < 5 || value.length > 30) {
-    errorMsg.textContent = "Insira um nome entre 5 e 30 caracteres";
-    boolUserName = false;
-  } else if (value === users.find(element => element.userName === value)) {
-    errorMsg.textContent = "Este nome já está sendo utilizado";
-    boolUserName = false;
+    switch (event.target.name) {
+      case "userName":
+        spanError.textContent = checkLength(event.target.value.length, 5, 30);
+        spanError.textContent = checkUserName(event.target.value);
+        break;
+      case "userRealName":
+        spanError.textContent = checkLength(event.target.value.length, 5, 50);
+        break;
+      case "userEmail":
+        spanError.textContent = checkLength(event.target.value.length, 10, 100);
+        spanError.textContent = checkEmail(event.target.value);
+        break;
+      case "userPhone":
+        spanError.textContent = checkPhone(event.target.value);
+        break;
+      case "userDate":
+        spanError.textContent = checkDate(event.target.value);
+        break;
+      case "userPass":
+        spanError.textContent = checkLength(event.target.value.length, 8, undefined);
+        spanError.textContent = checkPassword(event.target.value);
+        break;
+      case "userConfPass":
+        break;
+    }
+  });
+});
+
+//* Verificar o preenchimento de um campo
+function checkLength(length, minLength, maxLength) {
+  if (length === 0) {
+    return "*";
+  } else if (maxLength != undefined && length === maxLength) {
+    return "Maximo de caracteres: " + maxLength;
+  } else if (length < minLength) {
+    return "Minimo de caracteres: " + minLength;
   } else {
-    errorMsg.textContent = "";
+    return "";
+  }
+}
+
+//* Verificar o nome de usuário
+function checkUserName(userName) {
+  if (userName === users.find((element) => element.userName === userName)) {
+    boolUserName = false;
+    return "Este nome já está sendo utilizado";
+  } else {
     boolUserName = true;
   }
-});
-
-//* Verificar o nome real
-
-const inputUserRealName = document.querySelector("#userRealName");
-var boolUserRealName = true;
-
-inputUserRealName.addEventListener("blur", (event) => {
-  const errorMsg = document.querySelector("#realNameSpan");
-  var value = event.target.value;
-
-  if (value.length > 0 && value.length < 5) {
-    errorMsg.textContent = "Insira o nome completo";
-    boolUserRealName = false;
-  } else {
-    errorMsg.textContent = "";
-    boolUserRealName = true;
-  }
-});
+}
 
 //* Verificar o email
-const inputUserEmail = document.querySelector("#userEmail");
-var boolUserEmail = false;
+function checkEmail(email) {
+  var validRegex =
+    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
-inputUserEmail.addEventListener("blur", (event) => {
-  const errorMsg = document.querySelector("#emailSpan");
-  var value = event.target.value;
-
-  var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-
-  if (value.length === 0) {
-    errorMsg.textContent = "*";
+  if (!email.match(validRegex)) {
     boolUserEmail = false;
-  } else if(!value.match(validRegex)){
-    errorMsg.textContent = "Insira um email válido";
-    boolUserEmail = false;
+    return "Insira um email válido";
   } else {
-    errorMsg.textContent = "";
     boolUserEmail = true;
   }
-});
+}
 
 //* Verificar o telefone
-const inputUserPhone = document.querySelector("#userPhone");
-var boolUserPhone = true;
-
-inputUserPhone.addEventListener("keypress", (event) => {
+userPhone.addEventListener("keypress", (event) => {
   var char = String.fromCharCode(event.which);
 
   if (!/[0-9|| ||-]/.test(char)) {
     event.preventDefault();
   }
 
-  let inputLength = inputUserPhone.value.length;
+  let inputLength = event.target.value.length;
 
   if (inputLength === 2) {
-    inputUserPhone.value += " ";
+    event.target.value += " ";
   } else if (inputLength === 8) {
-    inputUserPhone.value += "-";
+    event.target.value += "-";
   }
 });
 
-inputUserPhone.addEventListener("blur", (event) => {
-  const errorMsg = document.querySelector("#phoneSpan");
-  var value = event.target.value;
+function checkPhone(phone) {
+  digits = phone.replace(/\D/g, "");
 
-  digits = value.replace(/\D/g, "");
-
-  if (digits.length > 0 && digits.length != 11) {
-    errorMsg.textContent = "Insira um número válido";
+  if (phone.length === 0) {
     boolUserPhone = false;
-  } else if (digits.length > 0 && (value.charAt(2) != " " || value.charAt(8) != "-")) {
-    errorMsg.textContent = "Formatação inválida";
+    return "*";
+  } else if (digits.length != 11) {
     boolUserPhone = false;
+    return "Insira um número válido";
+  } else if (phone.length === 13 &&(phone.charAt(2) != " " || phone.charAt(8) != "-")) {
+    boolUserPhone = false;
+    return "Formatação inválida";
   } else {
-    errorMsg.textContent = "";
     boolUserPhone = true;
+    return "";
   }
-});
+}
 
 //* Verificar a data de nascimento
-const inputUserDate = document.querySelector("#userDate");
-var boolUserDate = true;
-
-inputUserDate.addEventListener("blur", (event) => {
-  const errorMsg = document.querySelector("#dateSpan");
-  let value = Date.parse(event.target.value);
-
-  if (value > Date.now()) {
-    errorMsg.textContent = "Data inválida";
+function checkDate(date) {
+  if (date > Date.now()) {
     boolUserDate = false;
+    return "Data inválida";
   } else {
-    errorMsg.textContent = "";
     boolUserDate = true;
+    return "";
   }
-});
+}
 
 //* Verificar a senha
-const inputUserPass = document.querySelector("#userPass");
-var boolUserPass = false;
-
-inputUserPass.addEventListener("blur", (event) => {
-  const errorMsg = document.querySelector("#passSpan");
-  var value = event.target.value;
-  
-  if (value.length === 0) {
-    errorMsg.textContent = "*";
+function checkPassword(password) {
+  if (password.search(/[a-z]/) < 0) {
     boolUserPass = false;
-  } else if (value.length < 8) {
-    errorMsg.textContent = "Insira uma senha com mais de 8 caracteres";
+    return "Insira uma senha com pelo menos um caractere minusculo";
+  } else if (password.search(/[A-Z]/) < 0) {
     boolUserPass = false;
-  } else if (value.search(/[a-z]/) < 0) {
-    errorMsg.textContent = "Insira uma senha com pelo menos um caractere minusculo";
+    return "Insira uma senha com pelo menos um caractere maiusculo";
+  } else if (password.search(/[0-9]/) < 0) {
     boolUserPass = false;
-  } else if (value.search(/[A-Z]/) < 0) {
-    errorMsg.textContent = "Insira uma senha com pelo menos um caractere maiusculo";
-    boolUserPass = false;
-  } else if (value.search(/[0-9]/) < 0) {
-    errorMsg.textContent = "Insira uma senha com pelo menos um digito";
-    boolUserPass = false;
+    return "Insira uma senha com pelo menos um digito";
   } else {
-    errorMsg.textContent = "";
     boolUserPass = true;
   }
-});
+}
 
 //* Confirmar a senha
-const inputUserConfPass = document.querySelector("#userConfPass");
-var boolUserConfPass = false;
-
-inputUserConfPass.addEventListener("blur", (event) => {
-  const errorMsg = document.querySelector("#confPassSpan");
-  var value = event.target.value;
-
-  if (value.length === 0) {
-    errorMsg.textContent = "*";
-    boolUserConfPass = false;
-  } else if (value != inputUserPass.value) {
-    errorMsg.textContent = "A senha inserida esta incorreta";
-    boolUserConfPass = false;
+function confirmPassword(confPassword) {
+  if (confPassword.length === 0) {
+    boolUserConf = false;
+    return "*";
+  } else if (confPassword != userPass.value) {
+    boolUserConf = false;
+    return "A senha inserida esta incorreta";
   } else {
-    errorMsg.textContent = "";
-    boolUserConfPass = true;
+    boolUserConf = true;
+    return "";
   }
-});
+}
 
 //! Verificar envio do formulário
 const form = document.querySelector("#formUser");
@@ -176,12 +165,11 @@ form.addEventListener("submit", (event) => {
   const buttonSpanError = document.querySelector("#buttonSpan");
 
   if (boolUserName === true &&
-    boolUserRealName === true &&
     boolUserEmail === true &&
     boolUserPhone === true &&
     boolUserDate === true &&
     boolUserPass === true &&
-    boolUserConfPass === true) {
+    boolUserConf === true) {
 
     buttonSpanError.textContent = "";
 

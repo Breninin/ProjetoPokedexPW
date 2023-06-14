@@ -26,13 +26,13 @@
                 <!-- Nome -->
                 <div class="flexGenericColumn">
                     <label class="pokeLabel" for="pokeName">Nome Pokemon</label>
-                    <input type="text" name="pokeName" class="pokeInputText inputHover" style="width: 160%;" id="">
+                    <input type="text" name="pokeName" class="pokeInputText inputHover centerText" style="width: 160%;" id="" required minlength="2">
                 </div>
                 
                 <!-- Número Dex -->
                 <div class="flexGenericColumn" style="margin-top: 10px;">
                     <label class="pokeLabel" for="pokeDexNumber">Numero Dex</label>
-                    <input type="number" name="pokeDexNumber" class="pokeInputText inputHover" id="" data-onlyDigits>
+                    <input type="text" name="pokeDexNumber" class="pokeInputText inputHover centerText" id="" data-onlyDigits maxlength="4" oncut="return false" oncopy="return false" onpaste="return false">
                 </div>
 
                 <!-- Tamanho e Peso -->
@@ -40,13 +40,13 @@
                     <!-- Tamanho -->
                     <div class="flexGenericColumn">
                         <label class="pokeLabel" for="pokeSize">Tamanho</label>
-                        <input type="text" name="pokeSize" class="pokeInputText inputHover" style="width: 60%;" id="">
+                        <input type="text" name="pokeSize" class="pokeInputText inputHover centerText" style="width: 60%;" id="">
                     </div>
 
                     <!-- Peso -->
                     <div class="flexGenericColumn">
                         <label class="pokeLabel" for="pokeWeight">Peso</label>
-                        <input type="text" name="pokeWeight" class="pokeInputText inputHover" style="width: 60%;" id="">
+                        <input type="text" name="pokeWeight" class="pokeInputText inputHover centerText" style="width: 60%;" id="">
                     </div>
                 </div>
 
@@ -55,13 +55,13 @@
                     <!-- Chance Sexo Masculino -->
                     <div class="flexGenericColumn">
                         <label class="pokeLabel" for="pokeChanceMasc">Chance Sexo <br> Masculino</label>
-                        <input type="number" name="pokeChanceMasc" class="pokeInputText inputHover" style="width: 60%;" id="" data-onlyDigits>
+                        <input type="text" name="pokeChanceMasc" class="pokeInputText inputHover centerText" style="width: 60%;" id="" data-onlyDigits maxlength="3" oncut="return false" oncopy="return false" onpaste="return false">
                     </div>
 
                     <!-- Chance Sexo Feminino -->
                     <div class="flexGenericColumn">
                         <label class="pokeLabel" for="pokeChanceFem">Chance Sexo <br> Feminino</label>
-                        <input type="number" name="pokeChanceFem" class="pokeInputText inputHover" style="width: 60%;" id="" data-onlyDigits>
+                        <input type="text" name="pokeChanceFem" class="pokeInputText inputHover centerText" style="width: 60%;" id="" data-onlyDigits maxlength="3" oncut="return false" oncopy="return false" onpaste="return false">
                     </div>
                 </div>
 
@@ -72,13 +72,13 @@
                         <!-- HP -->
                         <div class="flexGenericColumn">
                             <label class="pokeLabel" for="pokeStatHp">HP</label>
-                            <input type="number" name="pokeStatHp" class="pokeInputText inputHover" style="width: 60%;" id="" data-onlyDigits>
+                            <input type="text" name="pokeStatHp" class="pokeInputText inputHover centerText" style="width: 60%;" id="" data-onlyDigits maxlength="3" oncut="return false" oncopy="return false" onpaste="return false">
                         </div>
     
                         <!-- SPEED -->
                         <div class="flexGenericColumn">
                             <label class="pokeLabel" for="pokeStatSpeed">SPEED</label>
-                            <input type="number" name="pokeStatSpeed" class="pokeInputText inputHover" style="width: 60%;" id="" data-onlyDigits>
+                            <input type="text" name="pokeStatSpeed" class="pokeInputText inputHover centerText" style="width: 60%;" id="" data-onlyDigits maxlength="3" oncut="return false" oncopy="return false" onpaste="return false">
                         </div>
                     </div>
 
@@ -87,13 +87,13 @@
                         <!-- HP -->
                         <div class="flexGenericColumn">
                             <label class="pokeLabel" for="pokeStatAtk">ATK</label>
-                            <input type="number" name="pokeStatAtk" class="pokeInputText inputHover" style="width: 60%;" id="" data-onlyDigits>
+                            <input type="text" name="pokeStatAtk" class="pokeInputText inputHover centerText" style="width: 60%;" id="" data-onlyDigits maxlength="3" oncut="return false" oncopy="return false" onpaste="return false">
                         </div>
     
                         <!-- SPEED -->
                         <div class="flexGenericColumn">
                             <label class="pokeLabel" for="pokeStatDef">DEF</label>
-                            <input type="number" name="pokeStatDef" class="pokeInputText inputHover" style="width: 60%;" id="" data-onlyDigits>
+                            <input type="text" name="pokeStatDef" class="pokeInputText inputHover centerText" style="width: 60%;" id="" data-onlyDigits maxlength="3" oncut="return false" oncopy="return false" onpaste="return false">
                         </div>
                     </div>
 
@@ -102,13 +102,13 @@
                         <!-- HP -->
                         <div class="flexGenericColumn">
                             <label class="pokeLabel" for="pokeStatSpAtk">SP. ATK</label>
-                            <input type="number" name="pokeStatSpAtk" class="pokeInputText inputHover" style="width: 60%;" id="" data-onlyDigits>
+                            <input type="text" name="pokeStatSpAtk" class="pokeInputText inputHover centerText" style="width: 60%;" id="" data-onlyDigits maxlength="3" oncut="return false" oncopy="return false" onpaste="return false">
                         </div>
     
                         <!-- SPEED -->
                         <div class="flexGenericColumn">
                             <label class="pokeLabel" for="pokeStatSpDef">SP. DEF</label>
-                            <input type="number" name="pokeStatSpDef" class="pokeInputText inputHover" style="width: 60%;" id="" data-onlyDigits>
+                            <input type="text" name="pokeStatSpDef" class="pokeInputText inputHover centerText" style="width: 60%;" id="" data-onlyDigits maxlength="3" oncut="return false" oncopy="return false" onpaste="return false">
                         </div>
                     </div>
                 </div>
@@ -267,5 +267,5 @@
         </form>
     </main>
 </body>
-
+<script src="../../js/formularios/formCadastrarPokemon.js"></script>
 </html>
