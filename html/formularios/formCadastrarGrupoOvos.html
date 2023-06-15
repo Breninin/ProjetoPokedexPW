@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -21,13 +21,12 @@
         <a href="../ajuda.html">AJUDA</a>
     </div>
     <main>
-        <form class="flexUser">
-            <span class="spanErrorTittle"></span>
-
+        <form class="flexUser" action="" autocomplete="off" oncut="return false" oncopy="return false" onpaste="return false">
             <label class="userLabel">Nome do grupo</label>
-            <input type="text" name="eggName" class="userInputText">
+            <input type="text" name="eggName" class="userInputText" required minlength="3" data-check-length>
             <span class="spanError"></span>
             <input class="userInputButton" type="submit" value="SALVAR GRUPO DE OVOS">
+            <span class="spanErrorTittle" data-span-error></span>
         </form>
     </main>
 </body>

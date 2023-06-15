@@ -137,10 +137,11 @@ main {
   color: yellow;
 }
 
-.spanError, .spanErrorTexta, .spanErrorCombo  {
+.spanError, .spanErrorTexta, .spanErrorCombo , .spanErrorTittle {
   height: 20px;
   font-size: 17.5px;
   color: red;
+  padding: 10px;
 }
 
 

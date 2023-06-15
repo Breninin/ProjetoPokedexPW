@@ -1,5 +1,5 @@
-const inputEggName = document.querySelector("input[type=text]");
-const span = document.querySelector("span[class=spanError]");
+const inputEggName = document.querySelectorAll("input[type=text]");
+const span = document.querySelectorAll("span[class=spanError]");
 const spanTittle = document.querySelector("span[class=spanErrorTittle]");
 const form = document.querySelector("form[class=flexUser]");
 var boolEggName = false;

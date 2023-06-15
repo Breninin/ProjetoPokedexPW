@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -21,38 +21,52 @@
         <a href="../ajuda.html">AJUDA</a>
     </div>
     <main>
-        <div class="flexUser">
+        <form class="flexUser" action="" autocomplete="off" oncut="return false" oncopy="return false" onpaste="return false">
             <label class="userLabel" for="treinadorName">Nome Treinador</label>
-            <input type="text" name="treinadorName" class="userInputText" id="">
+            <input type="text" name="treinadorName" class="userInputText" required minlength="3" data-check-length>
+            <span class="spanError" data-span-error></span>
 
             <label class="userLabel" for="treinadorDescricao">Descrição Treinador</label>
-            <textarea name="treinadorDescricao" class="userInputTextSize" id="" rows="30" cols="30"></textarea>
+            <textarea name="treinadorDescricao" class="userInputTextSize"  rows="30" cols="30" required minlength="3" data-check-length></textarea>
+            <span class="spanErrorTexta" data-span-error></span>
 
             <label class="userLabel" for="treinadorTipo">Idade Treinador</label>
-            <input type="text" name="treinadorTipo" class="userInputText" id="">
+            <input type="text" name="treinadorTipo" class="userInputText" required minlength="3" data-check-length>
+            <span class="spanError" data-span-error></span>
 
             <label class="userLabel" for="treinadorGeracao">Geração Treinador</label>
-            <input type="text" name="treinadorGeracao" class="userInputText" id="">
+            <input type="text" name="treinadorGeracao" class="userInputText" required minlength="3" data-check-length>
+            <span class="spanError" data-span-error></span>
 
             <label class="userLabel" for="treinadorImage">Jogo Treinador</label>
-            <select name="treinadorJogo" class="userInputText" id="">
+            <select name="treinadorJogo" class="userInputText" >
+                <option value="0">Nenhum</option>
                 <option value="1">Red</option>
                 <option value="2">Blue / Green</option>
                 <option value="3">Yellow</option>
+                <option value="4">Gold</option>
+                <option value="5">Silver</option>
+                <option value="6">Crystal</option>
             </select>
+            <span class="spanErrorCombo" data-span-error></span>
 
             <label class="userLabel" for="treinadorImage">Imagem Treinador</label>
-            <input type="text" name="treinadorImage" class="userInputText" id="">
+            <input type="text" name="treinadorImage" class="userInputText" required minlength="3" data-check-length>
+            <span class="spanError" data-span-error></span>
 
             <label class="userLabel" for="treinadorFundo">Fundo Treinador</label>
-            <input type="text" name="treinadorFundo" class="userInputText" id="">
+            <input type="text" name="treinadorFundo" class="userInputText" required minlength="3" data-check-length>
+            <span class="spanError" data-span-error></span>
 
             <label class="userLabel" for="treinadorTema">Tema Treinador</label>
-            <input type="color" name="treinadorTema" class="userInputColor" id="">
+            <input type="color" name="treinadorTema" class="userInputColor" >
+            <span class="spanError" data-span-error></span>
 
-            <input class="userInputButton" type="button" value="SALVAR TREINADOR">
-        </div>
+            <input class="userInputButton" type="submit" value="SALVAR TREINADOR">
+            <span class="spanErrorTittle" data-span-error></span>
+        </form>
     </main>
 </body>
+<script src="../../js/formCadastrarTreinador.js"></script>
 
 </html>

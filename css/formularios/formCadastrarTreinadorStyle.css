@@ -152,3 +152,11 @@ main
     background-color: rgb(255, 30, 30);
     color: yellow;
 }
+
+.spanError, .spanErrorTexta, .spanErrorCombo , .spanErrorTittle {
+    height: 20px;
+    font-size: 17.5px;
+    color: red;
+    padding: 10px;
+  }
+  
