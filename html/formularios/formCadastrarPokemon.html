@@ -27,14 +27,14 @@
                 <div class="flexGenericColumn">
                     <label class="pokeLabel" for="pokeName">Nome Pokemon</label>
                     <span class="spanError" data-span-error>*</span>
-                    <input type="text" name="pokeName" class="pokeInputText inputHover centerText" style="width: 45vw;" required minlength="3" maxlength="40">
+                    <input type="text" name="pokeName" class="pokeInputText inputHover centerText" style="width: 45vw;" required minlength="3" maxlength="40" data-check-length>
                 </div>
                 
                 <!-- Número Dex -->
                 <div class="flexGenericColumn" style="margin-top: 10px;">
                     <label class="pokeLabel" for="pokeDexNumber">Numero Dex</label>
                     <span class="spanError" data-span-error>*</span>
-                    <input type="text" name="pokeDexNumber" class="pokeInputText inputHover centerText" data-only-digits required minlength="1" maxlength="4">
+                    <input type="text" name="pokeDexNumber" class="pokeInputText inputHover centerText" data-only-digits required minlength="1" maxlength="4" data-check-length>
                 </div>
 
                 <!-- Tamanho e Peso -->
@@ -43,14 +43,14 @@
                     <div class="flexGenericColumn">
                         <label class="pokeLabel" for="pokeSize">Tamanho</label>
                         <span class="spanError" data-span-error>*</span>
-                        <input type="text" name="pokeSize" class="pokeInputText inputHover centerText">
+                        <input type="text" name="pokeSize" class="pokeInputText inputHover centerText" data-digits-and-special required minlength="1" maxlength="4" data-check-length>
                     </div>
 
                     <!-- Peso -->
                     <div class="flexGenericColumn">
                         <label class="pokeLabel" for="pokeWeight">Peso</label>
                         <span class="spanError" data-span-error>*</span>
-                        <input type="text" name="pokeWeight" class="pokeInputText inputHover centerText">
+                        <input type="text" name="pokeWeight" class="pokeInputText inputHover centerText" data-digits-and-special required minlength="1" maxlength="6" data-check-length>
                     </div>
                 </div>
 
@@ -60,14 +60,14 @@
                     <div class="flexGenericColumn">
                         <label class="pokeLabel" for="pokeChanceMasc">Chance Sexo <br> Masculino</label>
                         <span class="spanError" data-span-error>*</span>
-                        <input type="text" name="pokeChanceMasc" class="pokeInputText inputHover centerText" data-only-digits>
+                        <input type="text" name="pokeChanceMasc" class="pokeInputText inputHover centerText" data-digits-and-special required minlength="1" maxlength="5" data-check-length>
                     </div>
 
                     <!-- Chance Sexo Feminino -->
                     <div class="flexGenericColumn">
                         <label class="pokeLabel" for="pokeChanceFem">Chance Sexo <br> Feminino</label>
                         <span class="spanError" data-span-error>*</span>
-                        <input type="text" name="pokeChanceFem" class="pokeInputText inputHover centerText" data-only-digits>
+                        <input type="text" name="pokeChanceFem" class="pokeInputText inputHover centerText" data-digits-and-special required minlength="1" maxlength="5" data-check-length>
                     </div>
                 </div>
 
@@ -79,14 +79,14 @@
                         <div class="flexGenericColumn">
                             <label class="pokeLabel" for="pokeStatHp">HP</label>
                             <span class="spanError" data-span-error>*</span>
-                            <input type="text" name="pokeStatHp" class="pokeInputText inputHover centerText" data-only-digits required minlength="1" maxlength="3">
+                            <input type="text" name="pokeStatHp" class="pokeInputText inputHover centerText" data-only-digits required minlength="1" maxlength="3" data-check-length>
                         </div>
     
                         <!-- SPEED -->
                         <div class="flexGenericColumn">
                             <label class="pokeLabel" for="pokeStatSpeed">SPEED</label>
                             <span class="spanError" data-span-error>*</span>
-                            <input type="text" name="pokeStatSpeed" class="pokeInputText inputHover centerText" data-only-digits required minlength="1" maxlength="3">
+                            <input type="text" name="pokeStatSpeed" class="pokeInputText inputHover centerText" data-only-digits required minlength="1" maxlength="3" data-check-length>
                         </div>
                     </div>
 
@@ -96,14 +96,14 @@
                         <div class="flexGenericColumn">
                             <label class="pokeLabel" for="pokeStatAtk">ATK</label>
                             <span class="spanError" data-span-error>*</span>
-                            <input type="text" name="pokeStatAtk" class="pokeInputText inputHover centerText" data-only-digits required minlength="1" maxlength="3">
+                            <input type="text" name="pokeStatAtk" class="pokeInputText inputHover centerText" data-only-digits required minlength="1" maxlength="3" data-check-length>
                         </div>
     
                         <!-- SPEED -->
                         <div class="flexGenericColumn">
                             <label class="pokeLabel" for="pokeStatDef">DEF</label>
                             <span class="spanError" data-span-error>*</span>
-                            <input type="text" name="pokeStatDef" class="pokeInputText inputHover centerText" data-only-digits required minlength="1" maxlength="3">
+                            <input type="text" name="pokeStatDef" class="pokeInputText inputHover centerText" data-only-digits required minlength="1" maxlength="3" data-check-length>
                         </div>
                     </div>
 
@@ -113,14 +113,14 @@
                         <div class="flexGenericColumn">
                             <label class="pokeLabel" for="pokeStatSpAtk">SP. ATK</label>
                             <span class="spanError" data-span-error>*</span>
-                            <input type="text" name="pokeStatSpAtk" class="pokeInputText inputHover centerText" data-only-digits required minlength="1" maxlength="3">
+                            <input type="text" name="pokeStatSpAtk" class="pokeInputText inputHover centerText" data-only-digits required minlength="1" maxlength="3" data-check-length>
                         </div>
     
                         <!-- SPEED -->
                         <div class="flexGenericColumn">
                             <label class="pokeLabel" for="pokeStatSpDef">SP. DEF</label>
                             <span class="spanError" data-span-error>*</span>
-                            <input type="text" name="pokeStatSpDef" class="pokeInputText inputHover centerText" data-only-digits required minlength="1" maxlength="3">
+                            <input type="text" name="pokeStatSpDef" class="pokeInputText inputHover centerText" data-only-digits required minlength="1" maxlength="3" data-check-length>
                         </div>
                     </div>
                 </div>
@@ -237,14 +237,14 @@
                         <div class="flexGenericColumn">
                             <label class="pokeLabel" for="pokeDescRed">Desc Red</label>
                             <span class="spanError" data-span-error>*</span>
-                            <textarea type="text" name="pokeDescRed" class="pokeInputText pokeDesc inputHover"></textarea>
+                            <textarea type="text" name="pokeDescRed" class="pokeInputText pokeDesc inputHover" data-check-length required minlength="10"></textarea>
                         </div>
 
                         <!-- Descrição Pokemon BLUE -->
                         <div class="flexGenericColumn">
                             <label class="pokeLabel" for="pokeDescBlue">Desc Blue</label>
                             <span class="spanError" data-span-error>*</span>
-                            <textarea type="text" name="pokeDescBlue" class="pokeInputText pokeDesc inputHover"></textarea>
+                            <textarea type="text" name="pokeDescBlue" class="pokeInputText pokeDesc inputHover" data-check-length required minlength="10"></textarea>
                         </div>
                     </div>
 
@@ -254,14 +254,14 @@
                         <div class="flexGenericColumn">
                             <label class="pokeLabel" for="pokeDescYellow">Desc Yellow</label>
                             <span class="spanError" data-span-error>*</span>
-                            <textarea type="text" name="pokeDescYellow" class="pokeInputText pokeDesc inputHover"></textarea>
+                            <textarea type="text" name="pokeDescYellow" class="pokeInputText pokeDesc inputHover" data-check-length required minlength="10"></textarea>
                         </div>
 
                         <!-- Descrição Pokemon GOLD -->
                         <div class="flexGenericColumn">
                             <label class="pokeLabel" for="pokeDescGold">Desc Gold</label>
                             <span class="spanError" data-span-error>*</span>
-                            <textarea type="text" name="pokeDescGold" class="pokeInputText pokeDesc inputHover"></textarea>
+                            <textarea type="text" name="pokeDescGold" class="pokeInputText pokeDesc inputHover" data-check-length required minlength="10"></textarea>
                         </div>
                     </div>
 
@@ -271,14 +271,14 @@
                         <div class="flexGenericColumn">
                             <label class="pokeLabel" for="pokeDescSilver">Desc Silver</label>
                             <span class="spanError" data-span-error>*</span>
-                            <textarea type="text" name="pokeDescSilver" class="pokeInputText pokeDesc inputHover"></textarea>
+                            <textarea type="text" name="pokeDescSilver" class="pokeInputText pokeDesc inputHover" data-check-length required minlength="10"></textarea>
                         </div>
 
                         <!-- Descrição Pokemon CRYSTAL -->
                         <div class="flexGenericColumn">
                             <label class="pokeLabel" for="pokeDescCrystal">Desc Crystal</label>
                             <span class="spanError" data-span-error>*</span>
-                            <textarea type="text" name="pokeDescCrystal" class="pokeInputText pokeDesc inputHover"></textarea>
+                            <textarea type="text" name="pokeDescCrystal" class="pokeInputText pokeDesc inputHover" data-check-length required minlength="10"></textarea>
                         </div>
                     </div>
                 </div>
