@@ -89,7 +89,7 @@ userPhone.addEventListener("keypress", (event) => {
 });
 
 function checkPhone(phone) {
-  digits = phone.replace(/\D/g, "");
+  var digits = phone.replace(/\D/g, "");
 
   if (phone.length === 0) {
     boolUserPhone = false;
