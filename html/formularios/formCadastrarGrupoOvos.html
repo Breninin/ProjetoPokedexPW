@@ -21,12 +21,12 @@
         <a href="../ajuda.html">AJUDA</a>
     </div>
     <main>
-        <form class="flexUser" action="" autocomplete="off" oncut="return false" oncopy="return false" onpaste="return false">
+        <form class="flexUser" autocomplete="off" oncut="return false" oncopy="return false" id="formUser" onpaste="return false">
             <label class="userLabel">Nome do grupo</label>
-            <span class="spanError">*</span>
-            <input type="text" name="eggName" class="userInputText" required minlength="3" data-check-length>
+            <span class="spanError" id="eggSpan" data-span-error>*</span>
+            <input type="text" id="egg" class="userInputText" required minlength="3" data-get-inputs>
             <input class="userInputButton" type="submit" value="SALVAR GRUPO DE OVOS">
-            <span class="spanErrorTittle" data-span-error></span>
+            <span class="spanErrorTittle" id="spantitle" data-span-error></span>
         </form>
     </main>
 </body>

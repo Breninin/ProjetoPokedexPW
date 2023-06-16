@@ -1,5 +1,12 @@
-const inputs = document.querySelectorAll("input[type=text]");
-const spans = document.querySelectorAll("span[class=spanError]");
+const inputs = document.querySelectorAll("input[type=text]"),
+  spans = document.querySelectorAll("span[class=spanError]"),
+  texta = document.querySelector("textarea"),
+  spanTexta = document.querySelector("span[class=spanErrorTexta]"),
+  combo = document.querySelector("select"),
+  spanCombo = document.querySelector("span[class=spanErrorCombo]"),
+  form = document.querySelector("form[class=flexUser]"),
+  panTittle = document.querySelector("span[class=spanErrorTittle]");
+
 var check = false;
 
 for (let i = 0; i < inputs.length; i++) {
@@ -18,16 +25,13 @@ for (let i = 0; i < inputs.length; i++) {
   });
 }
 
-const texta = document.querySelector("textarea");
-const spanTexta = document.querySelector("span[class=spanErrorTexta]");
-
 texta.addEventListener("blur", (event) => {
   var value = event.target.value;
   if (value.length == 0) {
     spanTexta.textContent = "";
     check = false;
-  } else if (value.length < 3) {
-    spanTexta.textContent = "Insira mais que 3 caracteres";
+  } else if (value.length < 5) {
+    spanTexta.textContent = "Insira mais que 5 caracteres";
     check = false;
   } else {
     spanTexta.textContent = "";
@@ -35,40 +39,18 @@ texta.addEventListener("blur", (event) => {
   }
 });
 
-const combo = document.querySelector("select");
-const spanCombo = document.querySelector("span[class=spanErrorCombo]");
-
 combo.addEventListener("blur", (event) => {
   var value = event.target.options[combo.selectedIndex].value;
-  if (value.length == 0) {
-    check = false;
-  } else {
+  if (value.length != null) {
     spanCombo.textContent = "";
     check = true;
   }
 });
 
-const form = document.querySelector("form[class=flexUser]");
-const spanTittle = document.querySelector("span[class=spanErrorTittle]");
-
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  spanCombo.textContent = "";
-
-  if (check && combo.options[combo.selectedIndex].value != 0) {
-    location.reload();
-  } else {
+  if (check) location.reload();
+  else
     spanTittle.textContent =
       "Erro ao enviar o formulario. Preencha os campos corretamente.";
-
-    if (texta.value.length == 0) spanTexta.textContent = "prencha esse campo";
-
-    if (combo.options[combo.selectedIndex].value == 0)
-      spanCombo.textContent = "Selecione um jogo.";
-
-    for (let i = 0; i < inputs.length; i++) {
-      if (inputs[i].value.length == 0)
-        spans[i].textContent = "prencha esse campo";
-    }
-  }
 });

@@ -21,26 +21,27 @@
         <a href="../ajuda.html">AJUDA</a>
     </div>
     <main>
-        <form class="flexUser" action="" autocomplete="off" oncut="return false" oncopy="return false" onpaste="return false">
+        <form class="flexUser" autocomplete="off" oncut="return false" oncopy="return false" onpaste="return false">
             <label class="userLabel" for="treinadorName">Nome Treinador</label>
-            <input type="text" name="treinadorName" class="userInputText" required minlength="3" data-check-length>
-            <span class="spanError" data-span-error></span>
+            <span class="spanError" data-span-error>*</span>
+            <input type="text" class="userInputText" required minlength="3" data-get-inputs>
 
             <label class="userLabel" for="treinadorDescricao">Descrição Treinador</label>
-            <textarea name="treinadorDescricao" class="userInputTextSize"  rows="30" cols="30" required minlength="3" data-check-length></textarea>
-            <span class="spanErrorTexta" data-span-error></span>
+            <span class="spanErrorTexta" data-span-error>*</span>
+            <textarea class="userInputTextSize" rows="30" cols="30" required minlength="5" data-get-inputs></textarea>
 
             <label class="userLabel" for="treinadorIdade">Idade Treinador</label>
-            <input type="number" name="treinadorIdade" class="userInputText" required minlength="3" data-check-length>
-            <span class="spanErrorNumber" data-span-error></span>
+            <span class="spanError" data-span-error-number>*</span>
+            <input type="text" class="userInputText" required minlength="1" data-only-digits>
 
             <label class="userLabel" for="treinadorGeracao">Geração Treinador</label>
-            <input type="text" name="treinadorGeracao" class="userInputText" required minlength="3" data-check-length>
-            <span class="spanError" data-span-error></span>
+            <span class="spanError" data-span-error>*</span>
+            <input type="text" class="userInputText" required minlength="3" data-get-inputs>
 
             <label class="userLabel" for="treinadorImage">Jogo Treinador</label>
-            <select name="treinadorJogo" class="userInputText" >
-                <option value="0">Nenhum</option>
+            <span class="spanErrorCombo" data-span-error-select>*</span>
+            <select class="userInputText" required data-required-select>
+                <option value="">Nenhum</option>
                 <option value="1">Red</option>
                 <option value="2">Blue / Green</option>
                 <option value="3">Yellow</option>
@@ -48,19 +49,18 @@
                 <option value="5">Silver</option>
                 <option value="6">Crystal</option>
             </select>
-            <span class="spanErrorCombo" data-span-error></span>
 
             <label class="userLabel" for="treinadorImage">Imagem Treinador</label>
-            <input type="text" name="treinadorImage" class="userInputText" required minlength="3" data-check-length>
-            <span class="spanError" data-span-error></span>
+            <span class="spanError" data-span-error>*</span>
+            <input type="text" class="userInputText" required minlength="3" data-get-inputs>
 
             <label class="userLabel" for="treinadorFundo">Fundo Treinador</label>
-            <input type="text" name="treinadorFundo" class="userInputText" required minlength="3" data-check-length>
-            <span class="spanError" data-span-error></span>
+            <span class="spanError" data-span-error>*</span>
+            <input type="text" class="userInputText" required minlength="3" data-get-inputs>
 
             <label class="userLabel" for="treinadorTema">Tema Treinador</label>
-            <input type="color" name="treinadorTema" class="userInputColor" >
-            <span class="spanError" data-span-error></span>
+            <span class="spanError"></span>
+            <input type="color" class="userInputColor">
 
             <input class="userInputButton" type="submit" value="SALVAR TREINADOR">
             <span class="spanErrorTittle" data-span-error></span>

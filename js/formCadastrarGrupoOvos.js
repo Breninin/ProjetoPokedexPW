@@ -1,29 +1,28 @@
-const inputEggName = document.querySelectorAll("input[type=text]");
-const span = document.querySelectorAll("span[class=spanError]");
-const spanTittle = document.querySelector("span[class=spanErrorTittle]");
-const form = document.querySelector("form[class=flexUser]");
-var boolEggName = false;
+const input = document.querySelector("#egg"),
+  span = document.querySelector("#eggSpan"),
+  form = document.querySelector("#formUser"), 
+  spanTitle = document.querySelector("#spantitle");
 
-inputEggName.addEventListener("blur", (event) => {
+var check = false;
+
+input.addEventListener("blur", (event) => {
   var value = event.target.value;
-  if (value.length === 0) {
+  if (value.length == 0) {
+    check = false;
     span.textContent = "";
-    boolEggName = false;
   } else if (value.length < 3) {
-    span.textContent = "Insira um nome entre 3 e 30 caracteres";
-    boolEggName = false;
+    check = false;
+    span.textContent = "Insira mais que 3 caracteres";
   } else {
+    check = true;
     span.textContent = "";
-    boolEggName = true;
   }
 });
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  if (boolEggName) {
-    location.reload();
-  } else {
-    span.textContent = "prencha esse campo";
-    spanTittle.textContent = "Erro ao enviar o formulario. Prncha os campos corretamente.";
-  }
+  if (check) location.reload();
+  else
+    spanTitle.textContent =
+      "Erro ao enviar o formulario. Prncha os campos corretamente.";
 });

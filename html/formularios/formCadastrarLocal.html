@@ -24,28 +24,29 @@
         <form class="flexUser" action="" autocomplete="off" oncut="return false" oncopy="return false" onpaste="return false">
 
             <label class="userLabel" for="localName">Nome Local</label>
-            <input type="text" name="localName" class="userInputText" required minlength="3" data-check-length>
-            <span class="spanError" data-span-error></span>
+            <span class="spanError" data-span-error>*</span>
+            <input type="text"  class="userInputText" required minlength="3" data-get-inputs>
 
             <label class="userLabel" for="localTipo">Tipo Local</label>
-            <input type="text" name="localTipo" class="userInputText" required minlength="3" data-check-length>
-            <span class="spanError" data-span-error></span>
+            <span class="spanError" data-span-error>*</span>
+            <input type="text"class="userInputText" required minlength="3" data-get-inputs>
 
             <label class="userLabel" for="localDescricao">Descrição Local</label>
-            <textarea name="localDescricao" class="userInputTextSize"  rows="30" cols="30" required minlength="3" data-check-length</textarea>
-            <span class="spanErrorTexta" data-span-error></span>
+            <span class="spanErrorTexta" data-span-error>*</span>
+            <textarea class="userInputTextSize" rows="30" cols="30" required minlength="5" data-get-inputs></textarea>
 
             <label class="userLabel" for="localRegiao">Região Local</label>
-            <input type="text" name="localRegiao" class="userInputText" required minlength="3" data-check-length>
-            <span class="spanError" data-span-error></span>
+            <span class="spanError" data-span-error>*</span>
+            <input type="text" class="userInputText" required minlength="3" data-get-inputs>
 
             <label class="userLabel" for="localGeracao">Geração Local</label>
-            <input type="text" name="localGeracao" class="userInputText" required minlength="3" data-check-length>
-            <span class="spanError" data-span-error></span>
+            <span class="spanError" data-span-error>*</span>
+            <input type="text" class="userInputText" required minlength="3" data-get-inputs>
 
             <label class="userLabel" for="localImage">Jogo Local</label>
-            <select name="localJogo" class="userInputText" >
-                <option value="0">Nenhum</option>
+            <span class="spanErrorCombo" data-span-error>*</span>
+            <select class="userInputText" required data-required-select>
+                <option value="">Nenhum</option>
                 <option value="1">Red</option>
                 <option value="2">Blue / Green</option>
                 <option value="3">Yellow</option>
@@ -53,19 +54,18 @@
                 <option value="5">Silver</option>
                 <option value="6">Crystal</option>
             </select>
-            <span class="spanErrorCombo" data-span-error></span>
 
             <label class="userLabel" for="localImage">Imagem Local</label>
-            <input type="text" name="localImage" class="userInputText" required minlength="3" data-check-length>
-            <span class="spanError" data-span-error></span>
+            <span class="spanError" data-span-error>*</span>
+            <input type="text" class="userInputText" required minlength="3" data-get-inputs>
 
             <label class="userLabel" for="localFundo">Fundo Local</label>
-            <input type="text" name="localFundo" class="userInputText" required minlength="3" data-check-length>
-            <span class="spanError" data-span-error></span>
+            <span class="spanError" data-span-error>*</span>
+            <input type="text" class="userInputText" required minlength="3" data-get-inputs>
 
             <label class="userLabel" for="localTema">Tema Local</label>
-            <input type="color" name="localTema" class="userInputColor" >
             <span class="spanError" data-span-error></span>
+            <input type="color" class="userInputColor" >
 
             <input class="userInputButton" type="submit" value="SALVAR LOCAL">
             <span class="spanErrorTittle" data-span-error></span>
