@@ -9,7 +9,7 @@ inputEggName.addEventListener("blur", (event) => {
   if (value.length === 0) {
     span.textContent = "";
     boolEggName = false;
-  } else if (value.length < 3 || value.length > 30) {
+  } else if (value.length < 3) {
     span.textContent = "Insira um nome entre 3 e 30 caracteres";
     boolEggName = false;
   } else {
