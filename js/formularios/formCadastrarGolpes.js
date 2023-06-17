@@ -1,3 +1,5 @@
+// Formulario de: Pedro Henrique
+
 const inputsCheckLength = document.querySelectorAll("[data-check-length]");
 const inputsOnlyDigits = document.querySelectorAll("[data-only-digits]");
 const inputsRequiredSelect = document.querySelectorAll("[data-required-select]");

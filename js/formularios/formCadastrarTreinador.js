@@ -1,3 +1,5 @@
+// Formulario de: Andrey Medeiros
+
 const inputs = document.querySelectorAll("[data-get-inputs]"),
   spans = document.querySelectorAll("[data-span-error]"),
   inputNumber = document.querySelector("[data-only-digits]"),

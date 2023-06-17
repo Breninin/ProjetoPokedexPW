@@ -1,3 +1,5 @@
+// Formulario de: Pedro Henrique
+
 const inputsRequiredSelect = document.querySelectorAll("[data-required-select]");
 const inputsRequiredCheckbox = document.querySelector("[data-required-checkbox]");
 

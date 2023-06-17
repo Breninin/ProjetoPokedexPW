@@ -1,3 +1,5 @@
+// Formulario de: Andrey Medeiros
+
 const inputs = document.querySelectorAll("input[type=text]"),
   spans = document.querySelectorAll("span[class=spanError]"),
   texta = document.querySelector("textarea"),
