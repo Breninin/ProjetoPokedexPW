@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/pokedex/pokedexStyle.css">
     <link rel="stylesheet" href="../css/topNavStyle.css">
-    <link rel="shortcut icon" href="../images/pokedexIcone.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/pokedex/pokedexStyle.css">
+    <link rel="stylesheet" href="../css/pokedex/pesquisaStyle.css">
     <link rel="stylesheet" href="../css/randomStyle.css">
+    <link rel="shortcut icon" href="../images/pokedexIcone.png" type="image/x-icon">
     <title>Pokédex</title>
 </head>
 
@@ -23,37 +24,63 @@
             <a href="ajuda.html">AJUDA</a>
         </div>
         <div class="barraLateral">
-            <input type="search" name="txtSearch" id="txtSearch">
-            <select name="sltPokemon" id="sltPokemon" size="19">
-                <option value="001">Bulbasaur</option>
-                <option value="002">Ivysaur</option>
-                <option value="003">Venusaur</option>
-                <option value="004">Charmander</option>
-                <option value="005">Charmeleon</option>
-                <option value="006">Charizard</option>
-                <option value="007">Squirtle</option>
-                <option value="008">Wartortle</option>
-                <option value="009">Blastoise</option>
-                <option value="010">Caterpie</option>
-                <option value="011">Metapod</option>
-                <option value="012">Butterfree</option>
-                <option value="013">Weedle</option>
-                <option value="014">Kakuna</option>
-                <option value="015">Beedrill</option>
-                <option value="016">Pidgey</option>
-                <option value="017">Pidgeotto</option>
-                <option value="018">Pidgeotto</option>
-                <option value="019">Pidgeot</option>
-                <option value="020">Rattata</option>
-            </select>
+            <input type="text" id="myInput" class="txtSearch" onkeyup="myFunction()"/>
+            <nav>
+                <ul id="myUL" class="ulPokemon">
+                    <li><a href="#">Bulbasaur</a></li>
+                    <li><a href="#">Ivysaur</a></li>
+                    <li><a href="#">Venusaur</a></li>
+                    <li><a href="#">Charmander</a></li>
+                    <li><a href="#">Charmeleon</a></li>
+                    <li><a href="#">Charizard</a></li>
+                    <li><a href="#">Squirtle</a></li>
+                    <li><a href="#">Wartortle</a></li>
+                    <li><a href="#">Blastoise</a></li>
+                    <li><a href="#">Caterpie</a></li>
+                    <li><a href="#">Metapod</a></li>
+                    <li><a href="#">Butterfree</a></li>
+                    <li><a href="#">Weedle</a></li>
+                    <li><a href="#">Kakuna</a></li>
+                    <li><a href="#">Beedrill</a></li>
+                    <li><a href="#">Pidgey</a></li>
+                    <li><a href="#">Pidgeotto</a></li>
+                    <li><a href="#">Pidgeot</a></li>
+                    <li><a href="#">Rattata</a></li>
+                    <li><a href="#">Ratticate</a></li>
+                </ul>
+            </nav>
         </div>
         <div class="infoPokemon">
 
             <div class="barraTopo">
+                <button class="botaoPokedex">POKÉMON</button>
+                <button class="botaoPokedex">STATS</button>
+                <button class="botaoPokedex">GOLPES</button>
+                <button class="botaoPokedex">LOCAIS</button>
+            </div>
 
+            <div class="telaPokemon">
+                <div class="cardEsquerdo">
+                    <div class="flexPokemon">
+                        <h1 class="nomePokemon">Pikachu Surpreso</h1>
+                        <h2 class="tituloPokemon">O Pokemon Surpreso</h1>
+                            <div class="flexTipoPokemon">
+                                <h2 class="tipoPokemon">Elétrico</h2>
+                                <h2 class="tipoPokemon">Surpresa</h2>
+                            </div>
+                    </div>
+                </div>
+                <div class="cardDireito">
+                    <img src="../images/pokedex/testes.jpeg" alt="Imagem do Pokemon escolhido" class="imgPokemon">
+                </div>
+                <div class="cardBaixo">
+                    <p class="descPokemon">This intelligent Pokémon roasts hard berries with electricity to make them
+                        tender enough to eat.</p>
+                    <p class="descPokemon">It raises its tail to check its surroundings. The tail is sometimes struck by
+                        lightning in this pose.</p>
+                </div>
             </div>
         </div>
-    </div>
+        <script src="../js/pokedex/pesquisa.js"></script>
 </body>
-
 </html>

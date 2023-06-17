@@ -3,7 +3,7 @@
 body {
     background-color: rgb(15, 15, 15);
 
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--PokemonGBTextFont), Arial, Helvetica, sans-serif;
     font-size: 12pt;
 
     margin: 0;
@@ -29,62 +29,7 @@ body {
     background: rgb(235, 0, 0);
 }
 
-.barraLateral {
-    position: absolute;
-    float: left;
-    left: 0;
-
-    margin-top: 60px;
-    margin-right: 81.2%;
-
-    width: 18.8%;
-    height: 90.9%;
-
-    text-align: center;
-
-    background-color: rgb(200, 200, 200);
-}
-
-#txtSearch {
-    margin-top: 10px;
-
-    width: 80%;
-    height: 30px;
-
-    border-radius: 1px;
-    border-color: red;
-    background-color: rgb(235, 235, 235);
-}
-
-#sltPokemon {
-    margin-top: 10px;
-
-    width: 90%;
-
-    border-radius: 1px;
-    border-color: red;
-    background-color: rgb(235, 235, 235);
-
-
-    text-align: center;
-    font-family: pokemonGBTextFont, Arial, Helvetica, sans-serif;
-    font-size: 12pt;
-}
-
-#sltPokemon option {
-    padding-top: 6px;
-    padding-bottom: 2px;
-    margin-top: 5px;
-}
-
-#sltPokemon option:hover {
-    color: rgb(210, 0, 0);
-}
-
-#sltPokemon option::after {
-    background-color: rgb(210, 0, 0);
-    color: white;
-}
+/*DEFINIÇÕES DA TELA*/
 
 .infoPokemon {
     position: absolute;
@@ -95,12 +40,144 @@ body {
     margin-left: 18.8%;
 
     width: 81.2%;
-    height: 90.9%;
+    height: 91.4%;
 }
+
+.telaPokemon
+{
+    width: 100%;
+    height: 90%;
+}
+
+/*DEFINIÇÕES TOP NAV POKEDEX*/
 
 .barraTopo {
     width: 100%;
     height: 10%;
 
     background-color: rgb(210, 0, 0);
+
+    display: flex;
+    flex-flow: row nowrap;
+
+    align-items: center;
+    justify-content: space-around;
+}
+
+.botaoPokedex
+{
+    font-family: var(--PokemonGBTextFont), Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    font-weight: 900;
+
+    width: 20%;
+    height: 85%;
+
+    border: none;
+    background-color: rgb(250, 0, 0);
+    color: white;
+}
+
+.botaoPokedex:hover
+{
+    background-color: rgb(180, 10, 10);
+    color: white;
+}
+
+/*INFORMAÇÕES EXIBIDAS NA PARTE SUPERIOR ESQUERDA DA TELA*/
+
+.cardEsquerdo
+{
+    float: left;
+    width: 70%;
+    height: 50%;
+}
+
+.flexPokemon
+{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.nomePokemon
+{
+    float: left;
+    margin: 30px 30px 0px;
+    
+    font-family: omegaRubyFont, alphaSapphireFont, pokemonGBTextFont;
+    font-size: 56pt;
+}
+
+.tituloPokemon
+{
+    margin: 15px 30px;
+
+    font-family: omegaRubyFont, alphaSapphireFont, pokemonGBTextFont;
+    font-size: 26pt;
+}
+
+.flexTipoPokemon
+{
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.tipoPokemon
+{
+    float: left;
+    margin: 5px 30px;
+    padding: 0px 10px;
+
+    height: 60px;
+    line-height: 60px;
+
+    font-family: var(--PokemonGBTextFont), Arial, Helvetica, sans-serif;
+    font-size: 20pt;
+
+    text-align: center;
+    vertical-align: center;
+
+    background-color: red;
+}
+
+/*INFORMAÇÕES EXIBIDAS NA PARTE SUPERIOR DIREITA DA TELA*/
+
+.cardDireito
+{
+    float: right;
+    width: 30%;
+    height: 50%;
+}
+
+.imgPokemon
+{
+    height: 80%;
+    width: 75%;
+
+    margin: 15px 35px;
+
+    border-radius: 50%;
+
+    float: right;
+}
+
+/*INFORMAÇÕES EXIBIDAS NA PARTE INFERIOR DA TELA*/
+
+.cardBaixo
+{
+    float: left;
+    width: 100%;
+    height: 50%;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-flow: row wrap;
+}
+
+.descPokemon
+{
+    margin: 0px 5%;
+    font-family: var(--PokemonGBTextFont), Arial, Helvetica, sans-serif;
+    font-size: 18pt;
 }

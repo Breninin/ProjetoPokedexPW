@@ -8,11 +8,13 @@ Breno Alcides Paio de Medeiros
 
 Pedro Henrique dos Santos Xavier Araujo
 
-> Páginas Obrigatórias:
+> Formularios do 2 Bimestre:
 
-    ➔ Home 
-    ➔ Pokedex
-    ➔ Ajuda
-    ➔ Personagens
-    ➔ Localizações
-    ➔ Quem somos
+    ➔ Cadastrar Usuário | Breno
+    ➔ Cadastrar Pokémon | Breno
+    ➔ Cadastrar Grupo de Ovos | Andrey
+    ➔ Cadastrar Local | Andrey
+    ➔ Cadastrar Treinador | Andrey
+    ➔ Cadastrar Golpe | Pedro
+    ➔ Cadastrar Fraqueza | Pedro
+    ➔ Cadastrar Resistência | Pedro

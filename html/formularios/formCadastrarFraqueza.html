@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/topNavStyle.css">
+    <link rel="stylesheet" href="../../css/formularios/formCadastrarFraquezaStyle.css">
+    <link rel="shortcut icon" href="../../images/pokedexIcone.png" type="image/x-icon">
+    <title>Cadastrar Fraqueza</title>
+</head>
+
+<body>
+    <main>
+            <div class="topNav">
+                <a href="../../index.html">PÁGINA INÍCIAL</a>
+                <a href="../pokedex.html">POKÉDEX</a>
+                <a href="../personagens.html">PERSONAGENS</a>
+                <a href="../locais.html">LUGARES</a>
+                <a href="../quemSomos.html">QUEM SOMOS</a>
+                <a href="../ajuda.html">AJUDA</a>
+            </div>
+            <form id="formWeak" action="submit" autocomplete="off" oncut="return false" oncopy="return false"
+                onpaste="return false">
+
+                <div class="flexGenericColumn">
+
+                    <div class="flexGenericColumn">
+                        <!-- Tipo Select -->
+
+                        <label class="pokeLabel" for="pokeType">Tipo Defensor</label>
+                        <span class="spanError" data-span-error>*</span>
+                        <select class="pokeInputText inputHover pokeSelect centerText" name="typeDefender" required
+                            data-required-select>
+                            <option value="0" selected>Nenhum</option>
+                            <option value="1">Aço</option>
+                            <option value="2">Água</option>
+                            <option value="3">Dragão</option>
+                            <option value="4">Elétrico</option>
+                            <option value="5">Fantasma</option>
+                            <option value="6">Fogo</option>
+                            <option value="7">Gelo</option>
+                            <option value="8">Inseto</option>
+                            <option value="9">Lutador</option>
+                            <option value="10">Normal</option>
+                            <option value="11">Pedra</option>
+                            <option value="12">Planta</option>
+                            <option value="13">Psíquico</option>
+                            <option value="14">Sombrio</option>
+                            <option value="15">Terrestre</option>
+                            <option value="16">Venenoso</option>
+                            <option value="17">Voador</option>
+                        </select>
+
+                        <div class="flexGenericColumn">
+                            <!-- Fraqueza -->
+                            <label class="pokeLabel" for="pokeTypeWeakness">Tipo Atacante</label>
+                            <span class="spanError" data-span-error>*</span>
+                            <!-- Fraqueza Select -->
+                            <select class="pokeInputText inputHover pokeSelect centerText" name="typeAttacker"
+                                required data-required-select>
+                                <option value="0" selected>Nenhum</option>
+                                <option value="1">Aço</option>
+                                <option value="2">Água</option>
+                                <option value="3">Dragão</option>
+                                <option value="4">Elétrico</option>
+                                <option value="5">Fantasma</option>
+                                <option value="6">Fogo</option>
+                                <option value="7">Gelo</option>
+                                <option value="8">Inseto</option>
+                                <option value="9">Lutador</option>
+                                <option value="10">Normal</option>
+                                <option value="11">Pedra</option>
+                                <option value="12">Planta</option>
+                                <option value="13">Psíquico</option>
+                                <option value="14">Sombrio</option>
+                                <option value="15">Terrestre</option>
+                                <option value="16">Venenoso</option>
+                                <option value="17">Voador</option>
+                            </select>
+                        </div>
+
+                        <!--botão salvar-->
+                        <span class="spanError" id="buttonSpan" style="margin-top: 50px;" data-span-error>*</span>
+                        <input class="userInputButton" type="submit" value="SALVAR FRAQUEZA" id="buttonSave" />
+
+                    </div>
+                </div>
+            </form>
+    </main>
+</body>
+<script src="../../js/formularios/formCadastrarFraqueza.js"></script>
+</html>

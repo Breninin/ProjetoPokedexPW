@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../images/pokedexIcone.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/topNavStyle.css">
+    <link rel="stylesheet" href="../../css/formularios/formCadastrarTreinadorStyle.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="topNav">
+        <a href="../../index.html">PÁGINA INÍCIAL</a>
+        <a href="../pokedex.html">POKÉDEX</a>
+        <a href="../personagens.html">PERSONAGENS</a>
+        <a href="../locais.html">LUGARES</a>
+        <a href="../quemSomos.html">QUEM SOMOS</a>
+        <a href="../ajuda.html">AJUDA</a>
+    </div>
+    <main>
+        <form class="flexUser" autocomplete="off" oncut="return false" oncopy="return false" onpaste="return false">
+            <label class="userLabel" for="treinadorName">Nome Treinador</label>
+            <span class="spanError" data-span-error>*</span>
+            <input type="text" class="userInputText" required minlength="3" data-get-inputs>
+
+            <label class="userLabel" for="treinadorDescricao">Descrição Treinador</label>
+            <span class="spanErrorTexta" data-span-error>*</span>
+            <textarea class="userInputTextSize" rows="30" cols="30" required minlength="5" data-get-inputs></textarea>
+
+            <label class="userLabel" for="treinadorIdade">Idade Treinador</label>
+            <span class="spanError" data-span-error-number>*</span>
+            <input type="text" class="userInputText" required minlength="1" data-only-digits>
+
+            <label class="userLabel" for="treinadorGeracao">Geração Treinador</label>
+            <span class="spanError" data-span-error>*</span>
+            <input type="text" class="userInputText" required minlength="3" data-get-inputs>
+
+            <label class="userLabel" for="treinadorImage">Jogo Treinador</label>
+            <span class="spanErrorCombo" data-span-error-select>*</span>
+            <select class="userInputText" required data-required-select>
+                <option value="">Nenhum</option>
+                <option value="1">Red</option>
+                <option value="2">Blue / Green</option>
+                <option value="3">Yellow</option>
+                <option value="4">Gold</option>
+                <option value="5">Silver</option>
+                <option value="6">Crystal</option>
+            </select>
+
+            <label class="userLabel" for="treinadorImage">Imagem Treinador</label>
+            <span class="spanError" data-span-error>*</span>
+            <input type="text" class="userInputText" required minlength="3" data-get-inputs>
+
+            <label class="userLabel" for="treinadorFundo">Fundo Treinador</label>
+            <span class="spanError" data-span-error>*</span>
+            <input type="text" class="userInputText" required minlength="3" data-get-inputs>
+
+            <label class="userLabel" for="treinadorTema">Tema Treinador</label>
+            <span class="spanError"></span>
+            <input type="color" class="userInputColor">
+
+            <input class="userInputButton" type="submit" value="SALVAR TREINADOR">
+            <span class="spanErrorTittle" data-span-error></span>
+        </form>
+    </main>
+</body>
+<script src="../../js/formCadastrarTreinador.js"></script>
+
+</html>

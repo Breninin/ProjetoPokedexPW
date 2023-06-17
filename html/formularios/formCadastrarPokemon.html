@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../images/pokedexIcone.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/topNavStyle.css">
+    <link rel="stylesheet" href="../../css/formularios/formCadastrarPokemonStyle.css">
+    <title>Cadastrar Pokemon</title>
+</head>
+
+<body>
+    <div class="topNav">
+        <a href="../../index.html">PÁGINA INÍCIAL</a>
+        <a href="../pokedex.html">POKÉDEX</a>
+        <a href="../personagens.html">PERSONAGENS</a>
+        <a href="../locais.html">LUGARES</a>
+        <a href="../quemSomos.html">QUEM SOMOS</a>
+        <a href="../ajuda.html">AJUDA</a>
+    </div>
+    <main>
+        <form id="formPoke" action="submit" autocomplete="off" oncut="return false" oncopy="return false" onpaste="return false">
+            <div class="flexGenericColumn">
+                <!-- Nome -->
+                <div class="flexGenericColumn">
+                    <label class="pokeLabel" for="pokeName">Nome Pokemon</label>
+                    <span class="spanError" data-span-error style="width: 45vw;">*</span>
+                    <input type="text" name="pokeName" class="pokeInputText inputHover centerText" style="width: 45vw;" required minlength="3" maxlength="40" data-check-length>
+                </div>
+                
+                <!-- Número Dex -->
+                <div class="flexGenericColumn" style="margin-top: 10px;">
+                    <label class="pokeLabel" for="pokeDexNumber">Numero Dex</label>
+                    <span class="spanError" data-span-error>*</span>
+                    <input type="text" name="pokeDexNumber" class="pokeInputText inputHover centerText" data-only-digits required minlength="1" maxlength="4" data-check-length>
+                </div>
+
+                <!-- Tamanho e Peso -->
+                <div class="flexGenericRow" style="margin-top: 50px;">
+                    <!-- Tamanho -->
+                    <div class="flexGenericColumn">
+                        <label class="pokeLabel" for="pokeSize">Tamanho</label>
+                        <span class="spanError" data-span-error>*</span>
+                        <input type="text" name="pokeSize" class="pokeInputText inputHover centerText" data-digits-and-special required minlength="1" maxlength="4" data-check-length>
+                    </div>
+
+                    <!-- Peso -->
+                    <div class="flexGenericColumn">
+                        <label class="pokeLabel" for="pokeWeight">Peso</label>
+                        <span class="spanError" data-span-error>*</span>
+                        <input type="text" name="pokeWeight" class="pokeInputText inputHover centerText" data-digits-and-special required minlength="1" maxlength="6" data-check-length>
+                    </div>
+                </div>
+
+                <!-- Chances Sexo -->
+                <div class="flexGenericRow" style="margin-top: 10px;">
+                    <!-- Chance Sexo Masculino -->
+                    <div class="flexGenericColumn">
+                        <label class="pokeLabel" for="pokeChanceMasc">Chance Sexo <br> Masculino</label>
+                        <span class="spanError" data-span-error>*</span>
+                        <input type="text" name="pokeChanceMasc" class="pokeInputText inputHover centerText" data-digits-and-special required minlength="1" maxlength="5" data-check-length>
+                    </div>
+
+                    <!-- Chance Sexo Feminino -->
+                    <div class="flexGenericColumn">
+                        <label class="pokeLabel" for="pokeChanceFem">Chance Sexo <br> Feminino</label>
+                        <span class="spanError" data-span-error>*</span>
+                        <input type="text" name="pokeChanceFem" class="pokeInputText inputHover centerText" data-digits-and-special required minlength="1" maxlength="5" data-check-length>
+                    </div>
+                </div>
+
+                <!-- Status -->
+                <div class="flexGenericColumn" style="margin-top: 50px;">
+                    <!-- HP e SPEED-->
+                    <div class="flexGenericRow">
+                        <!-- HP -->
+                        <div class="flexGenericColumn">
+                            <label class="pokeLabel" for="pokeStatHp">HP</label>
+                            <span class="spanError" data-span-error>*</span>
+                            <input type="text" name="pokeStatHp" class="pokeInputText inputHover centerText" data-only-digits required minlength="1" maxlength="3" data-check-length>
+                        </div>
+    
+                        <!-- SPEED -->
+                        <div class="flexGenericColumn">
+                            <label class="pokeLabel" for="pokeStatSpeed">SPEED</label>
+                            <span class="spanError" data-span-error>*</span>
+                            <input type="text" name="pokeStatSpeed" class="pokeInputText inputHover centerText" data-only-digits required minlength="1" maxlength="3" data-check-length>
+                        </div>
+                    </div>
+
+                    <!-- Stats Físicos-->
+                    <div class="flexGenericRow" style="margin-top: 10px;">
+                        <!-- HP -->
+                        <div class="flexGenericColumn">
+                            <label class="pokeLabel" for="pokeStatAtk">ATK</label>
+                            <span class="spanError" data-span-error>*</span>
+                            <input type="text" name="pokeStatAtk" class="pokeInputText inputHover centerText" data-only-digits required minlength="1" maxlength="3" data-check-length>
+                        </div>
+    
+                        <!-- SPEED -->
+                        <div class="flexGenericColumn">
+                            <label class="pokeLabel" for="pokeStatDef">DEF</label>
+                            <span class="spanError" data-span-error>*</span>
+                            <input type="text" name="pokeStatDef" class="pokeInputText inputHover centerText" data-only-digits required minlength="1" maxlength="3" data-check-length>
+                        </div>
+                    </div>
+
+                    <!-- Stats Especiais-->
+                    <div class="flexGenericRow" style="margin-top: 10px;">
+                        <!-- HP -->
+                        <div class="flexGenericColumn">
+                            <label class="pokeLabel" for="pokeStatSpAtk">SP. ATK</label>
+                            <span class="spanError" data-span-error>*</span>
+                            <input type="text" name="pokeStatSpAtk" class="pokeInputText inputHover centerText" data-only-digits required minlength="1" maxlength="3" data-check-length>
+                        </div>
+    
+                        <!-- SPEED -->
+                        <div class="flexGenericColumn">
+                            <label class="pokeLabel" for="pokeStatSpDef">SP. DEF</label>
+                            <span class="spanError" data-span-error>*</span>
+                            <input type="text" name="pokeStatSpDef" class="pokeInputText inputHover centerText" data-only-digits required minlength="1" maxlength="3" data-check-length>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tipos -->
+                <div class="flexGenericRow" style="margin-top: 50px;">
+                    <!-- Tipo Primario -->
+                    <div class="flexGenericColumn">
+                        <label class="pokeLabel" for="pokeTypePrimary">Tipo <br> Primário</label>
+                        <span class="spanError" data-span-error>*</span>
+                        <select class="pokeInputText inputHover pokeSelect centerText" name="pokeTypePrimary" required data-required-select>
+                            <option value="0" selected>Nenhum</option>
+                            <option value="1">Aço</option>
+                            <option value="2">Água</option>
+                            <option value="3">Dragão</option>
+                            <option value="4">Elétrico</option>
+                            <option value="5">Fantasma</option>
+                            <option value="6">Fogo</option>
+                            <option value="7">Gelo</option>
+                            <option value="8">Inseto</option>
+                            <option value="9">Lutador</option>
+                            <option value="10">Normal</option>
+                            <option value="11">Pedra</option>
+                            <option value="12">Planta</option>
+                            <option value="13">Psíquico</option>
+                            <option value="14">Sombrio</option>
+                            <option value="15">Terrestre</option>
+                            <option value="16">Venenoso</option>
+                            <option value="17">Voador</option>
+                        </select>
+                    </div>
+
+                    <!-- Tipo Secundário -->
+                    <div class="flexGenericColumn">
+                        <label class="pokeLabel" for="pokeTypeSecondary">Tipo <br> Secundário</label>
+                        <span class="spanError" data-span-error style="height: 17.5px;"></span>
+                        <select class="pokeInputText inputHover pokeSelect centerText" name="pokeTypeSecondary">
+                            <option value="0" selected>Nenhum</option>
+                            <option value="1">Aço</option>
+                            <option value="2">Água</option>
+                            <option value="3">Dragão</option>
+                            <option value="4">Elétrico</option>
+                            <option value="5">Fantasma</option>
+                            <option value="6">Fogo</option>
+                            <option value="7">Gelo</option>
+                            <option value="8">Inseto</option>
+                            <option value="9">Lutador</option>
+                            <option value="10">Normal</option>
+                            <option value="11">Pedra</option>
+                            <option value="12">Planta</option>
+                            <option value="13">Psíquico</option>
+                            <option value="14">Sombrio</option>
+                            <option value="15">Terrestre</option>
+                            <option value="16">Venenoso</option>
+                            <option value="17">Voador</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Grupos de Ovos -->
+                <div class="flexGenericRow" style="margin-top: 50px;">
+                    <!-- Grupo de Ovos Primário -->
+                    <div class="flexGenericColumn">
+                        <label class="pokeLabel" for="pokeEggPrimary">Grupo de Ovos <br> Primário</label>
+                        <span class="spanError" data-span-error>*</span>
+                        <select class="pokeInputText inputHover pokeSelect centerText" name="pokeEggPrimary" required data-required-select>
+                            <option value="0" selected>Nenhum</option>
+                            <option value="1">Água 1</option>
+                            <option value="2">Água 2</option>
+                            <option value="3">Água 3</option>
+                            <option value="4">Amorfo</option>
+                            <option value="5">Campo</option>
+                            <option value="6">Desconhecido</option>
+                            <option value="7">Ditto</option>
+                            <option value="8">Dragão</option>
+                            <option value="9">Fada</option>
+                            <option value="10">Grama</option>
+                            <option value="11">Inseto</option>
+                            <option value="12">Humanoide</option>
+                            <option value="13">Mineral</option>
+                            <option value="14">Monstro</option>
+                        </select>
+                    </div>
+
+                    <!-- Grupo de Ovos Secundário -->
+                    <div class="flexGenericColumn">
+                        <label class="pokeLabel" for="pokeEggSecondary">Grupo de Ovos <br> Secundário</label>
+                        <span class="spanError" data-span-error style="height: 17.5px;"></span>
+                        <select class="pokeInputText inputHover pokeSelect centerText" name="pokeEggSecondary">
+                            <option value="0" selected>Nenhum</option>
+                            <option value="1">Água 1</option>
+                            <option value="2">Água 2</option>
+                            <option value="3">Água 3</option>
+                            <option value="4">Amorfo</option>
+                            <option value="5">Campo</option>
+                            <option value="6">Desconhecido</option>
+                            <option value="7">Ditto</option>
+                            <option value="8">Dragão</option>
+                            <option value="9">Fada</option>
+                            <option value="10">Grama</option>
+                            <option value="11">Inseto</option>
+                            <option value="12">Humanoide</option>
+                            <option value="13">Mineral</option>
+                            <option value="14">Monstro</option>
+                        </select>
+                    </div>
+                </div> 
+
+                <!-- Flex Descrições -->
+                <div class="flexGenericColumn" style="margin-top: 50px;">
+                    <!-- Flex Descrições RED e BLUE -->
+                    <div class="flexGenericRow">
+                        <!-- Descrição Pokemon RED -->
+                        <div class="flexGenericColumn">
+                            <label class="pokeLabel" for="pokeDescRed">Desc Red</label>
+                            <span class="spanError" data-span-error>*</span>
+                            <textarea type="text" name="pokeDescRed" class="pokeInputText pokeDesc inputHover" data-check-length required minlength="10"></textarea>
+                        </div>
+
+                        <!-- Descrição Pokemon BLUE -->
+                        <div class="flexGenericColumn">
+                            <label class="pokeLabel" for="pokeDescBlue">Desc Blue</label>
+                            <span class="spanError" data-span-error>*</span>
+                            <textarea type="text" name="pokeDescBlue" class="pokeInputText pokeDesc inputHover" data-check-length required minlength="10"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Flex Descrições YELLOW e GOLD -->
+                    <div class="flexGenericRow" style="margin-top: 10px;">
+                        <!-- Descrição Pokemon YELLOW -->
+                        <div class="flexGenericColumn">
+                            <label class="pokeLabel" for="pokeDescYellow">Desc Yellow</label>
+                            <span class="spanError" data-span-error>*</span>
+                            <textarea type="text" name="pokeDescYellow" class="pokeInputText pokeDesc inputHover" data-check-length required minlength="10"></textarea>
+                        </div>
+
+                        <!-- Descrição Pokemon GOLD -->
+                        <div class="flexGenericColumn">
+                            <label class="pokeLabel" for="pokeDescGold">Desc Gold</label>
+                            <span class="spanError" data-span-error>*</span>
+                            <textarea type="text" name="pokeDescGold" class="pokeInputText pokeDesc inputHover" data-check-length required minlength="10"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Flex Descrições SILVER e CRYSTAL -->
+                    <div class="flexGenericRow" style="margin-top: 10px;">
+                        <!-- Descrição Pokemon SILVER -->
+                        <div class="flexGenericColumn">
+                            <label class="pokeLabel" for="pokeDescSilver">Desc Silver</label>
+                            <span class="spanError" data-span-error>*</span>
+                            <textarea type="text" name="pokeDescSilver" class="pokeInputText pokeDesc inputHover" data-check-length required minlength="10"></textarea>
+                        </div>
+
+                        <!-- Descrição Pokemon CRYSTAL -->
+                        <div class="flexGenericColumn">
+                            <label class="pokeLabel" for="pokeDescCrystal">Desc Crystal</label>
+                            <span class="spanError" data-span-error>*</span>
+                            <textarea type="text" name="pokeDescCrystal" class="pokeInputText pokeDesc inputHover" data-check-length required minlength="10"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Botão Salvar Pokémon -->
+                <span class="spanError" id="buttonSpan" data-span-error style="margin-top: 50px; width: 60vw;"></span>
+                <input class="userInputButton" type="submit" value="SALVAR POKÉMON" id="buttonSave"/>
+            </div>
+        </form>
+    </main>
+</body>
+<script src="../../js/formularios/formCadastrarPokemon.js"></script>
+</html>
