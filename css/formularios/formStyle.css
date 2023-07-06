@@ -42,30 +42,25 @@ form {
   justify-content: space-evenly;
 }
 
-.inputHover:hover {
-  border: 1px solid red;
-  background-color: rgb(205, 205, 205);
-}
-
-.pokeLabel {
+.formLabel {
   text-align: center;
   margin-top: 15px;
 }
 
-.pokeInputText {
+.formInputText {
   font-family: pokemonGBTextFont, Arial, Helvetica, sans-serif;
   font-size: 12pt;
 
   width: 20vw;
   padding: 5px;
-  margin: 0 30px;
+  margin: 0px 30px;
 
   border: 1px solid black;
   background-color: rgb(235, 235, 235);
   color: black;
 }
 
-.pokeDesc {
+.formDesc {
   width: 85%;
   height: 80px;
   line-height: 20px;
@@ -73,7 +68,7 @@ form {
   resize: vertical;
 }
 
-.userInputButton {
+.formInputButton {
   padding: 20px;
 
   font-family: pokemonGBTextFont, Arial, Helvetica, sans-serif;
@@ -87,7 +82,12 @@ form {
   cursor: pointer;
 }
 
-.userInputButton:hover {
+.formInputHover:hover {
+  border: 1px solid red;
+  background-color: rgb(205, 205, 205);
+}
+
+.formInputButton:hover {
   border: 2px solid rgb(128, 0, 0);
   background-color: rgb(255, 30, 30);
   color: yellow;
@@ -97,8 +97,7 @@ form {
   text-align: center;
 }
 
-.spanError
-{
+.spanError {
   min-height: 17.5px;
   width: 20vw;
   font-size: 17.5px;

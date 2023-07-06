@@ -1,99 +1,157 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/topNavStyle.css">
-    <link rel="stylesheet" href="../../css/formularios/formCadastrarGolpesStyle.css">
-    <link rel="shortcut icon" href="../../images/pokedexIcone.png" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/topNavStyle.css" />
+    <link rel="stylesheet" href="../../css/formularios/formStyle.css" />
+    <link
+      rel="shortcut icon"
+      href="../../images/pokedexIcone.png"
+      type="image/x-icon"
+    />
     <title>Cadastrar Golpe</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <main>
-        <div class="topNav">
-            <a href="../../index.html">PÁGINA INÍCIAL</a>
-                <a href="../pokedex.html">POKÉDEX</a>
-                <a href="../personagens.html">PERSONAGENS</a>
-                <a href="../locais.html">LUGARES</a>
-                <a href="../quemSomos.html">QUEM SOMOS</a>
-                <a href="../ajuda.html">AJUDA</a>
+      <div class="topNav">
+        <a href="../../index.html">PÁGINA INÍCIAL</a>
+        <a href="../pokedex.html">POKÉDEX</a>
+        <a href="../personagens.html">PERSONAGENS</a>
+        <a href="../locais.html">LUGARES</a>
+        <a href="../quemSomos.html">QUEM SOMOS</a>
+        <a href="../ajuda.html">AJUDA</a>
+      </div>
+      <form
+        id="formGolpes"
+        action="submit"
+        autocomplete="off"
+        oncut="return false"
+        oncopy="return false"
+        onpaste="return false"
+      >
+        <div class="flexGenericColumn">
+          <div class="flexGenericColumn">
+            <label class="formLabel" for="golpeName">Nome</label>
+            <span class="spanError" data-span-error>*</span>
+            <input
+              type="text"
+              name="golpeName"
+              class="formInputText formInputHover centerText"
+              required
+              minlength="3"
+              maxlength="20"
+              data-check-length
+            />
+          </div>
+
+          <div class="flexGenericColumn">
+            <label class="formLabel" for="golpeDano">Dano</label>
+            <span class="spanError" data-span-error>*</span>
+            <input
+              type="text"
+              name="golpeDano"
+              class="formInputText formInputHover centerText"
+              required
+              minlength="1"
+              maxlength="3"
+              data-check-length
+              data-only-digits
+            />
+          </div>
+
+          <div class="flexGenericColumn">
+            <label class="formLabel" for="golpePP">PP</label>
+            <span class="spanError" data-span-error>*</span>
+            <input
+              type="text"
+              name="golpePP"
+              class="formInputText formInputHover centerText"
+              required
+              minlength="1"
+              maxlength="2"
+              data-check-length
+              data-only-digits
+            />
+          </div>
+
+          <div class="flexGenericColumn">
+            <label class="formLabel" for="golpePrecisao">Precisão</label>
+            <span class="spanError" data-span-error>*</span>
+            <input
+              type="text"
+              name="golpePrecisao"
+              class="formInputText formInputHover centerText"
+              required
+              minlength="1"
+              maxlength="2"
+              data-check-length
+              data-only-digits
+            />
+          </div>
+
+          <div class="flexGenericColumn">
+            <label class="formLabel" for="golpeDesc">Descrição</label>
+            <span class="spanError" data-span-error>*</span>
+            <textarea
+              type="text"
+              name="golpeDesc"
+              class="formInputText formDesc formInputHover centerText"
+              required
+              minlength="1"
+              data-check-length
+            ></textarea>
+          </div>
+
+          <div class="flexGenericColumn">
+            <!-- Tipo Select -->
+            <label class="formLabel" for="golpeType">Tipo</label>
+            <span class="spanError" data-span-error>*</span>
+            <select
+              class="formInputText forminputHover formSelect centerText"
+              name="golpeType"
+              required
+              data-required-select
+            >
+              <option value="0" selected>Nenhum</option>
+              <option value="1">Aço</option>
+              <option value="2">Água</option>
+              <option value="3">Dragão</option>
+              <option value="4">Elétrico</option>
+              <option value="5">Fantasma</option>
+              <option value="6">Fogo</option>
+              <option value="7">Gelo</option>
+              <option value="8">Inseto</option>
+              <option value="9">Lutador</option>
+              <option value="10">Normal</option>
+              <option value="11">Pedra</option>
+              <option value="12">Planta</option>
+              <option value="13">Psíquico</option>
+              <option value="14">Sombrio</option>
+              <option value="15">Terrestre</option>
+              <option value="16">Venenoso</option>
+              <option value="17">Voador</option>
+            </select>
+
+            <!--botão salvar-->
+            <span
+              class="spanError"
+              id="buttonSpan"
+              style="margin-top: 50px"
+              data-span-error
+            ></span>
+            <input
+              class="formInputButton"
+              type="submit"
+              value="SALVAR GOLPE"
+              id="buttonSave"
+            />
+          </div>
         </div>
-        <form id="formGolpes" action="submit" autocomplete="off" oncut="return false" oncopy="return false"
-            onpaste="return false">
-            <div class="flexGenericColumn">
-
-                <div class="flexGenericColumn">
-                    <label class="pokeLabel" for="golpeName">Nome</label>
-                    <span class="spanError" data-span-error>*</span>
-                    <input type="text" name="golpeName" class="pokeInputText inputHover centerText"
-                    required minlength="3" maxlength="20" data-check-length>
-                </div>
-
-                <div class="flexGenericColumn">
-                    <label class="pokeLabel" for="golpeDano">Dano</label>
-                    <span class="spanError" data-span-error>*</span>
-                    <input type="text" name="golpeDano" class="pokeInputText inputHover centerText"
-                    required minlength="1" maxlength="3" data-check-length data-only-digits>
-                </div>
-
-                <div class="flexGenericColumn">
-                    <label class="pokeLabel" for="golpePP">PP</label>
-                    <span class="spanError" data-span-error>*</span>
-                    <input type="text" name="golpePP" class="pokeInputText inputHover centerText"
-                    required minlength="1" maxlength="2" data-check-length data-only-digits>
-                </div>
-
-                <div class="flexGenericColumn">
-                    <label class="pokeLabel" for="golpePrecisao">Precisão</label>
-                    <span class="spanError" data-span-error>*</span>
-                    <input type="text" name="golpePrecisao" class="pokeInputText inputHover centerText"
-                    required minlength="1" maxlength="2" data-check-length data-only-digits>
-                </div>
-
-                <div class="flexGenericColumn">
-                    <label class="pokeLabel" for="golpeDesc">Descrição</label>
-                    <span class="spanError" data-span-error>*</span>
-                    <textarea type="text" name="golpeDesc" class="pokeInputText pokeDesc inputHover centerText"
-                    required minlength="1" data-check-length></textarea>
-                </div>
-
-                <div class="flexGenericColumn">
-                    <!-- Tipo Select -->
-                    <label class="pokeLabel" for="golpeType">Tipo</label>
-                    <span class="spanError" data-span-error>*</span>
-                    <select class="pokeInputText inputHover pokeSelect centerText" name="golpeType" required
-                        data-required-select>
-                        <option value="0" selected>Nenhum</option>
-                        <option value="1">Aço</option>
-                        <option value="2">Água</option>
-                        <option value="3">Dragão</option>
-                        <option value="4">Elétrico</option>
-                        <option value="5">Fantasma</option>
-                        <option value="6">Fogo</option>
-                        <option value="7">Gelo</option>
-                        <option value="8">Inseto</option>
-                        <option value="9">Lutador</option>
-                        <option value="10">Normal</option>
-                        <option value="11">Pedra</option>
-                        <option value="12">Planta</option>
-                        <option value="13">Psíquico</option>
-                        <option value="14">Sombrio</option>
-                        <option value="15">Terrestre</option>
-                        <option value="16">Venenoso</option>
-                        <option value="17">Voador</option>
-                    </select>
-
-                    <!--botão salvar-->
-                    <span class="spanError" id="buttonSpan" style="margin-top: 50px;" data-span-error>*</span>
-                    <input class="userInputButton" type="submit" value="SALVAR GOLPE" id="buttonSave" />
-                </div>
-            </div>
-        </form>
+      </form>
     </main>
-</body>
-<script src="../../js/formularios/formCadastrarGolpes.js"></script>
-
+  </body>
+  <script src="../../js/formularios/formCadastrarGolpes.js"></script>
 </html>

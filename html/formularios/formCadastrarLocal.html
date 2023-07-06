@@ -1,77 +1,152 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../../images/pokedexIcone.png" type="image/x-icon">
-    <link rel="stylesheet" href="../../css/topNavStyle.css">
-    <link rel="stylesheet" href="../../css/formularios/formCadastrarLocalStyle.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../../images/pokedexIcone.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../../css/topNavStyle.css" />
+    <link rel="stylesheet" href="../../css/formularios/formStyle.css" />
     <title>Cadastrar Local</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="topNav">
-        <a href="../../index.html">PÁGINA INÍCIAL</a>
-        <a href="../pokedex.html">POKÉDEX</a>
-        <a href="../personagens.html">PERSONAGENS</a>
-        <a href="../locais.html">LUGARES</a>
-        <a href="../quemSomos.html">QUEM SOMOS</a>
-        <a href="../ajuda.html">AJUDA</a>
+      <a href="../../index.html">PÁGINA INÍCIAL</a>
+      <a href="../pokedex.html">POKÉDEX</a>
+      <a href="../personagens.html">PERSONAGENS</a>
+      <a href="../locais.html">LUGARES</a>
+      <a href="../quemSomos.html">QUEM SOMOS</a>
+      <a href="../ajuda.html">AJUDA</a>
     </div>
     <main>
-        <form class="flexUser" action="" autocomplete="off" oncut="return false" oncopy="return false" onpaste="return false">
+      <form
+        class="flexGenericColumn"
+        action=""
+        autocomplete="off"
+        oncut="return false"
+        oncopy="return false"
+        onpaste="return false"
+      >
+        <div class="flexGenericColumn">
+          <label class="formLabel" for="localName">Nome Local</label>
+          <span class="spanError" data-span-error>*</span>
+          <input
+            type="text"
+            class="formInputText formInputHover"
+            required
+            minlength="3"
+            data-get-inputs
+          />
+        </div>
 
-            <label class="userLabel" for="localName">Nome Local</label>
-            <span class="spanError" data-span-error>*</span>
-            <input type="text"  class="userInputText" required minlength="3" data-get-inputs>
+        <div class="flexGenericColumn">
+          <label class="formLabel" for="localTipo">Tipo Local</label>
+          <span class="spanError" data-span-error>*</span>
+          <input
+            type="text"
+            class="formInputText formInputHover"
+            required
+            minlength="3"
+            data-get-inputs
+          />
+        </div>
 
-            <label class="userLabel" for="localTipo">Tipo Local</label>
-            <span class="spanError" data-span-error>*</span>
-            <input type="text"class="userInputText" required minlength="3" data-get-inputs>
+        <div class="flexGenericColumn">
+          <label class="formLabel" for="localDescricao">Descrição Local</label>
+          <span class="spanErrorTexta" data-span-error>*</span>
+          <textarea
+            class="formInputText formDesc formInputHover"
+            rows="30"
+            cols="30"
+            required
+            minlength="5"
+            data-get-inputs
+          ></textarea>
+        </div>
 
-            <label class="userLabel" for="localDescricao">Descrição Local</label>
-            <span class="spanErrorTexta" data-span-error>*</span>
-            <textarea class="userInputTextSize" rows="30" cols="30" required minlength="5" data-get-inputs></textarea>
+        <div class="flexGenericColumn">
+          <label class="formLabel" for="localRegiao">Região Local</label>
+          <span class="spanError" data-span-error>*</span>
+          <input
+            type="text"
+            class="formInputText formInputHover"
+            required
+            minlength="3"
+            data-get-inputs
+          />
+        </div>
 
-            <label class="userLabel" for="localRegiao">Região Local</label>
-            <span class="spanError" data-span-error>*</span>
-            <input type="text" class="userInputText" required minlength="3" data-get-inputs>
+        <div class="flexGenericColumn">
+          <label class="formLabel" for="localGeracao">Geração Local</label>
+          <span class="spanError" data-span-error>*</span>
+          <input
+            type="text"
+            class="formInputText formInputHover"
+            required
+            minlength="3"
+            data-get-inputs
+          />
+        </div>
 
-            <label class="userLabel" for="localGeracao">Geração Local</label>
-            <span class="spanError" data-span-error>*</span>
-            <input type="text" class="userInputText" required minlength="3" data-get-inputs>
+        <div class="flexGenericColumn">
+          <label class="formLabel" for="localImage">Jogo Local</label>
+          <span class="spanErrorCombo" data-span-error>*</span>
+          <select
+            class="formInputText formInputHover"
+            required
+            data-required-select
+          >
+            <option value="">Nenhum</option>
+            <option value="1">Red</option>
+            <option value="2">Blue / Green</option>
+            <option value="3">Yellow</option>
+            <option value="4">Gold</option>
+            <option value="5">Silver</option>
+            <option value="6">Crystal</option>
+          </select>
+        </div>
 
-            <label class="userLabel" for="localImage">Jogo Local</label>
-            <span class="spanErrorCombo" data-span-error>*</span>
-            <select class="userInputText" required data-required-select>
-                <option value="">Nenhum</option>
-                <option value="1">Red</option>
-                <option value="2">Blue / Green</option>
-                <option value="3">Yellow</option>
-                <option value="4">Gold</option>
-                <option value="5">Silver</option>
-                <option value="6">Crystal</option>
-            </select>
+        <div class="flexGenericColumn">
+          <label class="formLabel" for="localImage">Imagem Local</label>
+          <span class="spanError" data-span-error>*</span>
+          <input
+            type="text"
+            class="formInputText formInputHover"
+            required
+            minlength="3"
+            data-get-inputs
+          />
+        </div>
 
-            <label class="userLabel" for="localImage">Imagem Local</label>
-            <span class="spanError" data-span-error>*</span>
-            <input type="text" class="userInputText" required minlength="3" data-get-inputs>
+        <div class="flexGenericColumn">
+          <label class="formLabel" for="localFundo">Fundo Local</label>
+          <span class="spanError" data-span-error>*</span>
+          <input
+            type="text"
+            class="formInputText formInputHover"
+            required
+            minlength="3"
+            data-get-inputs
+          />
+        </div>
 
-            <label class="userLabel" for="localFundo">Fundo Local</label>
-            <span class="spanError" data-span-error>*</span>
-            <input type="text" class="userInputText" required minlength="3" data-get-inputs>
+        <div class="flexGenericColumn">
+          <label class="formLabel" for="localTema">Tema Local</label>
+          <span class="spanError" data-span-error></span>
+          <input type="color" class="formInputText" />
+        </div>
 
-            <label class="userLabel" for="localTema">Tema Local</label>
-            <span class="spanError" data-span-error></span>
-            <input type="color" class="userInputColor" >
-
-            <input class="userInputButton" type="submit" value="SALVAR LOCAL">
-            <span class="spanErrorTittle" data-span-error></span>
-        </form>
+        <div class="flexGenericColumn" style="margin-top: 30px">
+          <span class="spanError" id="buttonSpan"></span>
+          <input class="formInputButton" type="submit" value="SALVAR USUÁRIO" />
+        </div>
+      </form>
     </main>
-</body>
-<script src="../../js/formularios/formCadastrarLocal.js"></script>
-
+  </body>
+  <script src="../../js/formularios/formCadastrarLocal.js"></script>
 </html>
