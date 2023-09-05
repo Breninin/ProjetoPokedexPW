@@ -23,7 +23,7 @@ form {
 
   padding: 2% 0;
 
-  background-color: rgba(15, 15, 15, 0.85);
+  background-color: var(--color-background-gray);
   color: white;
 }
 

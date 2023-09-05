@@ -1,0 +1,7 @@
+:root {
+    --color-background-gray: rgba(10, 10, 10, 0.95);
+    --color-background-dark-gray: rgba(5, 5, 5, 0.95);
+    --color-accent-red: rgb(235, 0, 0);
+    --color-accent-dark-red: rgb(185, 0, 0);
+    --color-accent-light-red: rgb(255, 45, 45);
+}

@@ -1,4 +1,5 @@
 @import url('fontsStyle.css');
+@import url('colorsStyle.css');
 
 .topNav {
   position: fixed;
@@ -14,9 +15,9 @@
   align-content: center;
   list-style-type: none;
 
-  background-color: rgb(20, 20, 20);
+  background-color: var(--color-background-gray);
 
-  font-size: 13pt;
+  font-size: 12pt;
 }
 
 /* Posicionamento e Formatação dos Links */
@@ -24,6 +25,12 @@
 .topNav a {
   position: relative;
   display: table-cell;
+
+  height: 8vh;
+  line-height: 8vh;
+
+  padding: 0 1vw;
+  
   text-decoration: none;
   text-align: center;
   vertical-align: middle;
@@ -32,20 +39,12 @@
   font-family: pokemonGBTextFont, omegaRubyFont, alphaSapphireFont;
   font-weight: bold;
 
-  width: 210px;
-  height: 60px;
-  line-height: 60px;
-
   transition: 0.2s ease color;
 }
 
-.topNav a:first-child {
-  line-height: 30px;
-}
-
 .topNav a:hover {
-  background-color: rgb(10, 10, 10);
-  color: rgb(210, 0, 0);
+  background-color: var(--color-background-dark-gray);
+  color: var(--color-accent-red);
 }
 
 /* Bolinhas Vermelha e Branca */
@@ -67,7 +66,7 @@
   width: 6px;
   height: 6px;
 
-  background-color: red;
+  background-color: var(--color-accent-red);
 }
 
 .topNav a:after {

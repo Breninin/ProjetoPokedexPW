@@ -1,0 +1,19 @@
+/* Footer */
+main:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+footer {
+  padding: 1vw 0;
+  border-radius: 10px;
+
+  width: 80vw;
+  size: 9vh;
+
+  background-color: var(--color-background-gray);
+  color: white;
+
+  text-align: center;
+}

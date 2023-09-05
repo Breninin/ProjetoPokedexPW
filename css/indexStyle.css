@@ -1,133 +1,135 @@
-@import url('fontsStyle.css');
+@import url("fontsStyle.css");
+@import url("colorsStyle.css");
+
+* {
+  margin: 0;
+  padding: 0;
+}
 
 body {
-    background-image: url('../images/menuInicial/Wallpaper151.jpg');
-    background-repeat: no-repeat;
-    background-position: 0px;
-    background-attachment: fixed;
-    background-size: 100% 100%;
+  background-image: url("../images/menuInicial/Wallpaper151.jpg");
+  background-repeat: no-repeat;
+  background-position: 0px;
+  background-attachment: fixed;
+  background-size: 100% 100%;
 
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12pt;
+  font-family: pokemonGBTextFont, Arial, Helvetica, sans-serif;
+  font-size: 16pt;
 
-    color: white;
+  text-align: center;
+}
+
+/* Flexboxes */
+
+.mainFlex {
+  margin-top: 10vh;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.flexGenericColumn {
+  display: flex;
+  flex-flow: column nowrap;
+
+  align-items: center;
+}
+
+.flexGenericRow {
+  display: flex;
+  flex-flow: row nowrap;
+
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 /* Scrollbar (Andrey) */
 
 ::-webkit-scrollbar {
-    width: 10px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #3b0000;
+  background: #3b0000;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgb(115, 0, 0);
+  background: rgb(115, 0, 0);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgb(235, 0, 0);
+  background: rgb(235, 0, 0);
 }
 
 /* Header */
-.cabecalho {
-    background-color: rgba(15, 15, 15, 0.75);
-    text-align: center;
+header {
+  padding: 3.25vh 0;
+  border-radius: 1vw;
 
-    font-family: pokemonTitleFont, omegaRubyFont, alphaSapphireFont, pokemonGBTextFont;
-    font-weight: bold;
+  width: 80vw;
 
-    margin-top: 70px;
-    margin-bottom: 5px;
-    margin-left: 200px;
-    margin-right: 200px;
+  background-color: var(--color-background-gray);
+  color: white;
 
-    padding-top: 1px;
-    padding-bottom: 1px;
+  text-align: center;
 }
 
-.cabecalho h1 {
-    font-size: 32pt;
-    font-weight: bold;
+header h1 {
+  font-size: 32pt;
+  font-weight: bold;
 }
 
 /* Main */
-.principal {
-    background-color: rgba(15, 15, 15, 0.85);
-    color: white;
-
-    margin-top: 15px;
-    margin-bottom: 10px;
-    margin-left: 25px;
-    margin-right: 25px;
-
-    padding-top: 5px;
-    padding-bottom: 5px;
+main {
+  padding: 1vh 0;
+  text-align: center;
 }
 
-/* Texto */
-.textoPrincipal {
-    width: 80%;
-    float: left;
-    text-align: center;
+.card{
+  margin: 0.5vh 0.5vw;
+  padding: 1vw 0;
+  border-radius: 10px;
+
+  width: 39.5vw;
+  height: 24.5vh;
+
+  background-color: var(--color-background-gray);
+  color: white;
+
+  text-align: center;
 }
 
-.textoPrincipal p {
-    margin-left: 50px;
-    margin-right: 50px;
-    font-family: pokemonGBTextFont, Arial, Helvetica, sans-serif;
+.card p{
+  margin: 0 0.5vw;
+  font-size: 13.5pt;
+  line-height: 2.75vh;
 }
 
-/* Imagem pokedex */
-.imagemPokedex {
-    width: 20%;
-    float: right;
+.card img{
+  width: 12vw;
+  size: 10vh;
 }
 
-.imagemPokedex img {
-    width: 255px;
-    height: 360px;
+.buttonGeneric {
+  padding: 2vh 0;
+  width: 15vw;
+  border-radius: 2.5px;
+
+  background-color: var(--color-accent-red);
+  color: white;
+
+  text-decoration: none;
 }
 
-/* Botão abrir Pokedex */
-.botaoPokedex {
-    text-align: center;
+.buttonGeneric:hover {
+  background-color: var(--color-accent-dark-red);
+  color: yellow;
 }
 
-.botaoPokedex button {
-    background-color: red;
-    color: white;
-    font-family: pokemonGBTextFont, omegaRubyFont, alphaSapphireFont;
-    font-weight: bold;
-    font-size: 20pt;
-    padding: 20px;
-}
-.botaoPokedex button a 
-{
-    color: white;
-    text-decoration: none;
-}
-.botaoPokedex button a:hover
-{
-    color: yellow;
-}
+.buttonPokedex {
+  padding: 5vh 0;
+  width: 22vw;
 
-/* Footer */
-.principal:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.rodape {
-    background-color: rgba(15, 15, 15, 0.85);
-    text-align: center;
-
-    margin-top: 15px;
-    margin-left: 55px;
-    margin-right: 55px;
-
-    padding: 5px;
+  font-size: 20pt;
 }

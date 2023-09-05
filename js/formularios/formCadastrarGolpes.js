@@ -89,15 +89,11 @@ function checkLength(length, minLength, maxLength) {
 const form = document.querySelector("#formGolpes");
 
 form.addEventListener("submit", (event) => {
-  event.preventDefault();
-
   const buttonSpanError = document.querySelector("#buttonSpan");
 
   if (boolGolpeType === true) {
     
     buttonSpanError.textContent = "";
-
-    location.reload();
   } else {
     buttonSpanError.textContent = "Erro ao enviar o formulario. Preencha os campos corretamente.";
   }
