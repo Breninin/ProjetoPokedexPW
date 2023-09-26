@@ -26,7 +26,6 @@
       </div>
       <form
         id="formGolpes"
-        action="submit"
         autocomplete="off"
         oncut="return false"
         oncopy="return false"
@@ -88,7 +87,7 @@
               class="formInputText formInputHover centerText"
               required
               minlength="1"
-              maxlength="2"
+              maxlength="3"
               data-check-length
               data-only-digits
             />
@@ -144,12 +143,11 @@
               style="margin-top: 50px"
               data-span-error
             ></span>
-            <input
+            <button
               class="formInputButton"
               type="submit"
-              value="SALVAR GOLPE"
               id="buttonSave"
-            />
+            >SALVAR GOLPE</button>
           </div>
         </div>
       </form>

@@ -26,7 +26,8 @@
     <main>
       <form
         class="flexGenericColumn"
-        action=""
+        action="../../php/formCadastrarLocal.php"
+        method="POST"
         autocomplete="off"
         oncut="return false"
         oncopy="return false"
@@ -36,6 +37,7 @@
           <label class="formLabel" for="localName">Nome Local</label>
           <span class="spanError" data-span-error>*</span>
           <input
+            name="localName"
             type="text"
             class="formInputText formInputHover"
             required
@@ -48,6 +50,7 @@
           <label class="formLabel" for="localTipo">Tipo Local</label>
           <span class="spanError" data-span-error>*</span>
           <input
+            name="localType"
             type="text"
             class="formInputText formInputHover"
             required
@@ -60,6 +63,7 @@
           <label class="formLabel" for="localDescricao">Descrição Local</label>
           <span class="spanErrorTexta" data-span-error>*</span>
           <textarea
+            name="localDesc"
             class="formInputText formDesc formInputHover"
             rows="30"
             cols="30"
@@ -73,18 +77,7 @@
           <label class="formLabel" for="localRegiao">Região Local</label>
           <span class="spanError" data-span-error>*</span>
           <input
-            type="text"
-            class="formInputText formInputHover"
-            required
-            minlength="3"
-            data-get-inputs
-          />
-        </div>
-
-        <div class="flexGenericColumn">
-          <label class="formLabel" for="localGeracao">Geração Local</label>
-          <span class="spanError" data-span-error>*</span>
-          <input
+            name="localRegion"
             type="text"
             class="formInputText formInputHover"
             required
@@ -97,6 +90,7 @@
           <label class="formLabel" for="localImage">Jogo Local</label>
           <span class="spanErrorCombo" data-span-error>*</span>
           <select
+            name="localGame"
             class="formInputText formInputHover"
             required
             data-required-select
@@ -111,10 +105,12 @@
           </select>
         </div>
 
+        <!--
         <div class="flexGenericColumn">
           <label class="formLabel" for="localImage">Imagem Local</label>
           <span class="spanError" data-span-error>*</span>
           <input
+            name=""
             type="text"
             class="formInputText formInputHover"
             required
@@ -122,11 +118,12 @@
             data-get-inputs
           />
         </div>
-
+        
         <div class="flexGenericColumn">
           <label class="formLabel" for="localFundo">Fundo Local</label>
           <span class="spanError" data-span-error>*</span>
           <input
+            name="localBackground"
             type="text"
             class="formInputText formInputHover"
             required
@@ -134,16 +131,17 @@
             data-get-inputs
           />
         </div>
+        -->
 
         <div class="flexGenericColumn">
           <label class="formLabel" for="localTema">Tema Local</label>
           <span class="spanError" data-span-error></span>
-          <input type="color" class="formInputText" />
+          <input name="localTema" type="color" class="formInputText" />
         </div>
 
         <div class="flexGenericColumn" style="margin-top: 30px">
           <span class="spanError" id="buttonSpan"></span>
-          <input class="formInputButton" type="submit" value="SALVAR USUÁRIO" />
+          <button class="formInputButton" type="submit">SALVAR LOCAL</button>
         </div>
       </form>
     </main>

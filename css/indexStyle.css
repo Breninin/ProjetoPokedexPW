@@ -113,7 +113,7 @@ main {
 
 .buttonGeneric {
   padding: 2vh 0;
-  width: 15vw;
+  width: 35vw;
   border-radius: 2.5px;
 
   background-color: var(--color-accent-red);

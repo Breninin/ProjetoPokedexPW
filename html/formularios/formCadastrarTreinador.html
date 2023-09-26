@@ -26,6 +26,8 @@
     <main>
       <form
         class="flexGenericColumn"
+        action="../../php/formCadastrarTreinador.php"
+        method="post"
         autocomplete="off"
         oncut="return false"
         oncopy="return false"
@@ -35,6 +37,7 @@
           <label class="formLabel" for="treinadorName">Nome Treinador</label>
           <span class="spanError" data-span-error>*</span>
           <input
+            name="treiName"
             type="text"
             class="formInputText formInputHover"
             required
@@ -49,6 +52,7 @@
           >
           <span class="spanError" data-span-error>*</span>
           <textarea
+            name="treiDesc"
             class="formInputText formDesc formInputHover"
             rows="30"
             cols="30"
@@ -62,6 +66,7 @@
           <label class="formLabel" for="treinadorIdade">Idade Treinador</label>
           <span class="spanError" data-span-error-number>*</span>
           <input
+            name="treiAge"
             type="text"
             class="formInputText formInputHover"
             required
@@ -71,23 +76,10 @@
         </div>
 
         <div class="flexGenericColumn">
-          <label class="formLabel" for="treinadorGeracao"
-            >Geração Treinador</label
-          >
-          <span class="spanError" data-span-error>*</span>
-          <input
-            type="text"
-            class="formInputText formInputHover"
-            required
-            minlength="3"
-            data-get-inputs
-          />
-        </div>
-
-        <div class="flexGenericColumn">
           <label class="formLabel" for="treinadorImage">Jogo Treinador</label>
           <span class="spanError" data-span-error-select>*</span>
           <select
+            name="treiGame"
             class="formInputText formInputHover"
             required
             data-required-select
@@ -102,10 +94,12 @@
           </select>
         </div>
 
+        <!--
         <div class="flexGenericColumn">
           <label class="formLabel" for="treinadorImage">Imagem Treinador</label>
           <span class="spanError" data-span-error>*</span>
           <input
+            name="treiImage"
             type="text"
             class="formInputText formInputHover"
             required
@@ -118,6 +112,7 @@
           <label class="formLabel" for="treinadorFundo">Fundo Treinador</label>
           <span class="spanError" data-span-error>*</span>
           <input
+            name="treiBackground"
             type="text"
             class="formInputText formInputHover"
             required
@@ -125,16 +120,17 @@
             data-get-inputs
           />
         </div>
+        -->
 
         <div class="flexGenericColumn">
           <label class="formLabel" for="treinadorTema">Tema Treinador</label>
           <span class="spanError"></span>
-          <input type="color" class="formInputText formInputHover" />
+          <input name="treiTema" type="color" class="formInputText formInputHover" />
         </div>
 
         <div class="flexGenericColumn" style="margin-top: 30px">
           <span class="spanError" id="buttonSpan"></span>
-          <input class="formInputButton" type="submit" value="SALVAR USUÁRIO" />
+          <button class="formInputButton" type="submit">SALVAR TREINADOR</button>
         </div>
       </form>
     </main>

@@ -26,7 +26,8 @@
       </div>
       <form
         id="formResis"
-        action="submit"
+        action="../../php/formCadastrarResistencia.php"
+        method="post"
         autocomplete="off"
         oncut="return false"
         oncopy="return false"
@@ -114,12 +115,11 @@
             data-span-error
             >*</span
           >
-          <input
+          <button
             class="formInputButton"
             type="submit"
-            value="SALVAR RESISTÊNCIA"
             id="buttonSave"
-          />
+          >SALVAR RESISTÊNCIA</button>
         </div>
       </form>
     </main>

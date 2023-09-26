@@ -26,9 +26,10 @@
       </div>
       <form
         id="formWeak"
-        action="submit"
+        action="../../php/formCadastrarFraqueza.php"
+        method="post"
         autocomplete="off"
-        oncut="return false"
+        oncut="return false"  
         oncopy="return false"
         onpaste="return false"
       >
@@ -105,12 +106,11 @@
               style="margin-top: 50px"
               data-span-error
             ></span>
-            <input
+            <button
               class="formInputButton"
               type="submit"
-              value="SALVAR FRAQUEZA"
               id="buttonSave"
-            />
+            >SALVAR FRAQUEZA</button>
           </div>
         </div>
       </form>

@@ -74,9 +74,5 @@ inputNumber.addEventListener("keypress", (event) => {
 });
 
 form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  if (check) location.reload();
-  else
-    spanTittle.textContent =
-      "Erro ao enviar o formulario. Preencha os campos corretamente.";
+
 });
